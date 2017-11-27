@@ -34,12 +34,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="servicecomposants" upperBound="-1"
         eType="#//ServiceComposants" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscompasants" upperBound="-1"
-        eType="#//PortsCompasants" containment="true"/>
+        eType="#//PortsComposants" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PortsCompasants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortsComposants"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceComposants"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PortsComposantsRequis" eSuperTypes="#//PortsCompasants"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PortsComposantsFournis" eSuperTypes="#//PortsCompasants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortsComposantsRequis" eSuperTypes="#//PortsComposants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortsComposantsFournis" eSuperTypes="#//PortsComposants"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceConposantsRequis" eSuperTypes="#//ServiceComposants"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceConposantsFournis" eSuperTypes="#//ServiceComposants"/>
   <eClassifiers xsi:type="ecore:EClass" name="Glue">
@@ -52,11 +52,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Contraintes"/>
   <eClassifiers xsi:type="ecore:EClass" name="BindingFournis" eSuperTypes="#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsfournis"
-        eType="#//PortsComposantsFournis"/>
+        lowerBound="2" upperBound="2" eType="#//PortsComposantsFournis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BindingRequis" eSuperTypes="#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsrequis"
-        eType="#//PortsComposantsRequis"/>
+        lowerBound="2" upperBound="2" eType="#//PortsComposantsRequis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentsRequisFournis" eSuperTypes="#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsrequis"
