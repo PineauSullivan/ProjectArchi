@@ -52,11 +52,11 @@
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/portscomposantsrequis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/serviceconposantsfournis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/roleconnecteursfournis"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/portscomposantsfournis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/serviceconposantsrequis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/roleconnecteursrequis"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

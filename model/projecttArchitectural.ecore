@@ -61,13 +61,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentsRequisFournis" eSuperTypes="#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsrequis"
         eType="#//PortsComposantsRequis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceconposantsfournis"
-        eType="#//ServiceConposantsFournis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursfournis"
+        eType="#//RoleConnecteursFournis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentFournisRequis" eSuperTypes="#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsfournis"
         eType="#//PortsComposantsFournis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceconposantsrequis"
-        eType="#//ServiceConposantsRequis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursrequis"
+        eType="#//RoleConnecteursRequis"/>
   </eClassifiers>
 </ecore:EPackage>
