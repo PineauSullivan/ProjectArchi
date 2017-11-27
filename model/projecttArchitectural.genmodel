@@ -7,15 +7,15 @@
   <foreignModel>projecttArchitectural.ecore</foreignModel>
   <genPackages prefix="ProjecttArchitectural" disposableProviderFactory="true" ecorePackage="projecttArchitectural.ecore#/">
     <genClasses ecoreClass="projecttArchitectural.ecore#//Element">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Element/contraintes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Element/configurations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Element/contraintes"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//Configurations">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Configurations/lien"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//Composants">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Composants/propriétés"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Composants/interfacecomposants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Composants/propriétés"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//Connecteurs">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Connecteurs/glue"/>
@@ -28,8 +28,8 @@
     <genClasses ecoreClass="projecttArchitectural.ecore#//Binding"/>
     <genClasses ecoreClass="projecttArchitectural.ecore#//Attachment"/>
     <genClasses ecoreClass="projecttArchitectural.ecore#//InterfaceComposants">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//InterfaceComposants/portscompasants"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//InterfaceComposants/servicecomposants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//InterfaceComposants/portscompasants"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//PortsCompasants"/>
     <genClasses ecoreClass="projecttArchitectural.ecore#//ServiceComposants"/>
@@ -46,19 +46,17 @@
     <genClasses ecoreClass="projecttArchitectural.ecore#//Contraintes"/>
     <genClasses ecoreClass="projecttArchitectural.ecore#//BindingFournis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingFournis/portscomposantsfournis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingFournis/roleconnecteursfournis"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//BindingRequis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingRequis/portscomposantsrequis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingRequis/roleconnecteursrequis"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/portscomposantsrequis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/roleconnecteursfournis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/serviceconposantsfournis"/>
     </genClasses>
     <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/portscomposantsfournis"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/roleconnecteursrequis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/serviceconposantsrequis"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

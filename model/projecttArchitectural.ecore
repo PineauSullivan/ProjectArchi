@@ -3,20 +3,20 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projecttArchitectural" nsURI="http://www.example.org/projecttArchitectural"
     nsPrefix="projecttArchitectural">
   <eClassifiers xsi:type="ecore:EClass" name="Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contraintes" upperBound="-1"
-        eType="#//Contraintes" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configurations" upperBound="-1"
         eType="#//Configurations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contraintes" upperBound="-1"
+        eType="#//Contraintes" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Configurations" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lien" upperBound="-1" eType="#//Lien"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Composants" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="propriétés" upperBound="-1"
-        eType="#//Propriétés" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfacecomposants" upperBound="-1"
         eType="#//InterfaceComposants" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propriétés" upperBound="-1"
+        eType="#//Propriétés" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connecteurs" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="glue" upperBound="-1" eType="#//Glue"
@@ -31,10 +31,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//Lien"/>
   <eClassifiers xsi:type="ecore:EClass" name="Attachment" eSuperTypes="#//Lien"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceComposants">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="portscompasants" upperBound="-1"
-        eType="#//PortsCompasants" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="servicecomposants" upperBound="-1"
         eType="#//ServiceComposants" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portscompasants" upperBound="-1"
+        eType="#//PortsCompasants" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PortsCompasants"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceComposants"/>
@@ -53,25 +53,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="BindingFournis" eSuperTypes="#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsfournis"
         eType="#//PortsComposantsFournis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursfournis"
-        eType="#//RoleConnecteursFournis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BindingRequis" eSuperTypes="#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsrequis"
         eType="#//PortsComposantsRequis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursrequis"
-        eType="#//RoleConnecteursRequis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentsRequisFournis" eSuperTypes="#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsrequis"
         eType="#//PortsComposantsRequis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursfournis"
-        eType="#//RoleConnecteursFournis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceconposantsfournis"
+        eType="#//ServiceConposantsFournis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentFournisRequis" eSuperTypes="#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portscomposantsfournis"
         eType="#//PortsComposantsFournis"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roleconnecteursrequis"
-        eType="#//RoleConnecteursRequis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceconposantsrequis"
+        eType="#//ServiceConposantsRequis"/>
   </eClassifiers>
 </ecore:EPackage>
