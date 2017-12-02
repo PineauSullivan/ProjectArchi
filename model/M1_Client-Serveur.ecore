@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="">
+  <eClassifiers xsi:type="ecore:EClass" name="Systeme" eSuperTypes="projecttArchitectural.ecore#//Configurations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configurationclientserveur"
+        eType="#//ClientServeur/ConfigurationClientServeur"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serveurdetail" eType="#//FonctionServeur/ServeurDetail"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingrequiscs" eType="#//BindingRequisCS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingfourniscs" eType="#//BindingFournisCS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingRequisCS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portrequisconfigcs" eType="#//FonctionServeur/PortRequisConfigCS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port_receive_request" eType="#//ClientServeur/Port_Send_Serveur"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingFournisCS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port_receive_request" eType="#//ClientServeur/Port_Receive_Request"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portfourniscs" eType="#//FonctionServeur/PortFournisCS"/>
+  </eClassifiers>
   <eSubpackages name="ClientServeur">
     <eClassifiers xsi:type="ecore:EClass" name="ComposantClient" eSuperTypes="projecttArchitectural.ecore#//Composants">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceclient" upperBound="-1"
@@ -33,26 +48,25 @@
     <eClassifiers xsi:type="ecore:EClass" name="CallerClient" eSuperTypes="#//ClientServeur/Roles projecttArchitectural.ecore#//RoleConnecteursFournis"/>
     <eClassifiers xsi:type="ecore:EClass" name="CallerServeur" eSuperTypes="#//ClientServeur/Roles projecttArchitectural.ecore#//RoleConnecteursFournis"/>
     <eClassifiers xsi:type="ecore:EClass" name="Roles" eSuperTypes="projecttArchitectural.ecore#//RoleConnecteurs"/>
-    <eClassifiers xsi:type="ecore:EClass" name="AttachmentCS" eSuperTypes="projecttArchitectural.ecore#//Attachment"/>
     <eClassifiers xsi:type="ecore:EClass" name="Attachment_SendRequest_to_Caller"
-        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis #//ClientServeur/AttachmentCS">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port_send_request" eType="#//ClientServeur/Port_Send_Client"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="callerserveur" eType="#//ClientServeur/CallerServeur"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CalledClient" eSuperTypes="#//ClientServeur/Roles projecttArchitectural.ecore#//RoleConnecteursRequis"/>
     <eClassifiers xsi:type="ecore:EClass" name="CalledServeur" eSuperTypes="#//ClientServeur/Roles projecttArchitectural.ecore#//RoleConnecteursRequis"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Attachment_Receive_request" eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis #//ClientServeur/AttachmentCS">
+    <eClassifiers xsi:type="ecore:EClass" name="Attachment_Receive_request" eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port_receive_request"
           eType="#//ClientServeur/Port_Receive_Request"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="calledserveur" eType="#//ClientServeur/CalledServeur"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Attachment_server_Send_to_Client"
-        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis #//ClientServeur/AttachmentCS">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port_send_serveur" eType="#//ClientServeur/Port_Send_Serveur"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="callerclient" eType="#//ClientServeur/CallerClient"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Attachment_server_Receive_of_Client"
-        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis #//ClientServeur/AttachmentCS">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port_receive_client"
           eType="#//ClientServeur/Port_Receive_Client"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="calledclient" eType="#//ClientServeur/CalledClient"/>
@@ -63,11 +77,24 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
           eType="#//ClientServeur/Roles" containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClientServeur" eSuperTypes="projecttArchitectural.ecore#//Configurations">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="composantclient" eType="#//ClientServeur/ComposantClient"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="composantserver" eType="#//ClientServeur/ComposantServer"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rpc" eType="#//ClientServeur/RPC"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_sendrequest_to_caller"
+          eType="#//ClientServeur/Attachment_SendRequest_to_Caller"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_receive_request"
+          eType="#//ClientServeur/Attachment_Receive_request"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_server_send_to_client"
+          eType="#//ClientServeur/Attachment_server_Send_to_Client"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_server_receive_of_client"
+          eType="#//ClientServeur/Attachment_server_Receive_of_Client"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="FonctionServeur">
     <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="projecttArchitectural.ecore#//Composants">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceconnectionmanager"
-          upperBound="-1" eType="#//FonctionServeur/InterfaceConnectionManager" containment="true"/>
+          eType="#//FonctionServeur/InterfaceConnectionManager"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="projecttArchitectural.ecore#//Composants">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interfacesecuritymanager"
@@ -77,17 +104,28 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="interfacedatabase" upperBound="-1"
           eType="#//FonctionServeur/InterfaceDatabase" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnectionManager" eSuperTypes="projecttArchitectural.ecore#//InterfaceComposants"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnectionManager" eSuperTypes="projecttArchitectural.ecore#//InterfaceComposants">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portrequisconfigcs" eType="#//FonctionServeur/PortRequisConfigCS"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portfourniscs" eType="#//FonctionServeur/PortFournisCS"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_connectionmanager_database"
+          eType="#//FonctionServeur/PortFournis_ConnectionManager_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_connectionmanager_database"
+          eType="#//FonctionServeur/PortRequis_ConnectionManager_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_connectionmanager_security"
+          eType="#//FonctionServeur/PortFournis_ConnectionManager_Security"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_connectionmanager_security"
+          eType="#//FonctionServeur/PortRequis_ConnectionManager_Security"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="interfaceSecurityManager" eSuperTypes="projecttArchitectural.ecore#//InterfaceComposants"/>
     <eClassifiers xsi:type="ecore:EClass" name="InterfaceDatabase" eSuperTypes="projecttArchitectural.ecore#//InterfaceComposants"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_ConnectionManager_Database"
-        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/InterfaceConnectionManager"/>
+        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_ConnectionManager_Database"
-        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/InterfaceConnectionManager"/>
+        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_ConnectionManager_Security"
-        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/InterfaceConnectionManager"/>
+        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_ConnectionManager_Security"
-        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/InterfaceConnectionManager"/>
+        eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_Security_Connection" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/interfaceSecurityManager"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_Security_Connection" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/interfaceSecurityManager"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_Security_Database" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/interfaceSecurityManager"/>
@@ -96,86 +134,85 @@
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_database_Connection" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/InterfaceDatabase"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_database_Security" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/InterfaceDatabase"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_database_Security" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/InterfaceDatabase"/>
-    <eClassifiers xsi:type="ecore:EClass" name="AttachmentServeurDetail"/>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_connectionM_Fournis_role_database_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_connectionmanager_database"
           eType="#//FonctionServeur/PortFournis_ConnectionManager_Database"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_connection"
           eType="#//FonctionServeur/RoleRequis_Database_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_connectionM_Requis_role_security_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_connectionmanager_security"
           eType="#//FonctionServeur/PortRequis_ConnectionManager_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_connection"
           eType="#//FonctionServeur/RoleFournis_Security_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_connectionM_Fournis_role_security_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_connectionmanager_security"
           eType="#//FonctionServeur/PortFournis_ConnectionManager_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_security_connection"
           eType="#//FonctionServeur/RoleRequis_Security_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_connectionM_Requis_role_database_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_connectionmanager_database"
           eType="#//FonctionServeur/PortRequis_ConnectionManager_Database"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_database_connection"
           eType="#//FonctionServeur/RoleFournis_Database_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Security_Requis_role_Connection_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_security_connection"
           eType="#//FonctionServeur/PortRequis_Security_Connection"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_connectionmanager_security"
           eType="#//FonctionServeur/RoleFournis_ConnectionManager_Security"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Security_Fournis_role_Connection_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_security_connection"
           eType="#//FonctionServeur/PortFournis_Security_Connection"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_security"
           eType="#//FonctionServeur/RoleRequis_ConnectionManager_Security"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Security_Requis_role_Database_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_security_database"
           eType="#//FonctionServeur/PortRequis_Security_Database"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_database_security"
           eType="#//FonctionServeur/RoleFournis_Database_Security"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Security_Fournis_role_Database_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_security"
           eType="#//FonctionServeur/RoleRequis_Database_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_security_database"
           eType="#//FonctionServeur/PortFournis_Security_Database"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Database_Requis_role_connection_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_database_connection"
           eType="#//FonctionServeur/PortRequis_database_Connection"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_connectionmanager_database"
           eType="#//FonctionServeur/RoleFournis_ConnectionManager_Database"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Database_Fournis_role_Connection_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_database_connection"
           eType="#//FonctionServeur/PortFournis_database_Connection"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_database"
           eType="#//FonctionServeur/RoleRequis_ConnectionManager_Database"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Database_Requis_role_Security_fournis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentsRequisFournis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portrequis_database_security"
           eType="#//FonctionServeur/PortRequis_database_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_database"
           eType="#//FonctionServeur/RoleFournis_Security_Database"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="attachment_Database_Fournis_role_Security_Requis"
-        eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis">
+        eSuperTypes="projecttArchitectural.ecore#//AttachmentFournisRequis">
       <eStructuralFeatures xsi:type="ecore:EReference" name="portfournis_database_security"
           eType="#//FonctionServeur/PortFournis_database_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_security_database"
@@ -208,5 +245,38 @@
     <eClassifiers xsi:type="ecore:EClass" name="RoleRequis_Database_Connection" eSuperTypes="projecttArchitectural.ecore#//RoleConnecteursRequis #//FonctionServeur/RoleServeurDetail"/>
     <eClassifiers xsi:type="ecore:EClass" name="RoleFournis_Database_Security" eSuperTypes="projecttArchitectural.ecore#//RoleConnecteursFournis #//FonctionServeur/RoleServeurDetail"/>
     <eClassifiers xsi:type="ecore:EClass" name="RoleRequis_Database_Security" eSuperTypes="projecttArchitectural.ecore#//RoleConnecteursRequis #//FonctionServeur/RoleServeurDetail"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortRequisConfigCS"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PortFournisCS"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ServeurDetail" eSuperTypes="projecttArchitectural.ecore#//Configurations">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionmanager" eType="#//FonctionServeur/ConnectionManager"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="securitymanager" eType="#//FonctionServeur/SecurityManager"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="database" eType="#//FonctionServeur/Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connecteurserveurd" eType="#//FonctionServeur/ConnecteurServeurD"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_connectionm_fournis_role_database_requis"
+          eType="#//FonctionServeur/attachment_connectionM_Fournis_role_database_Requis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_connectionm_requis_role_database_fournis"
+          eType="#//FonctionServeur/attachment_connectionM_Requis_role_database_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_connectionm_requis_role_security_fournis"
+          eType="#//FonctionServeur/attachment_connectionM_Requis_role_security_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_connectionm_fournis_role_security_requis"
+          eType="#//FonctionServeur/attachment_connectionM_Fournis_role_security_Requis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_security_requis_role_connection_fournis"
+          eType="#//FonctionServeur/attachment_Security_Requis_role_Connection_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_security_fournis_role_connection_requis"
+          eType="#//FonctionServeur/attachment_Security_Fournis_role_Connection_Requis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_security_requis_role_database_fournis"
+          eType="#//FonctionServeur/attachment_Security_Requis_role_Database_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_security_fournis_role_database_requis"
+          eType="#//FonctionServeur/attachment_Security_Fournis_role_Database_Requis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_database_requis_role_connection_fournis"
+          eType="#//FonctionServeur/attachment_Database_Requis_role_connection_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_database_fournis_role_connection_requis"
+          eType="#//FonctionServeur/attachment_Database_Fournis_role_Connection_Requis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_database_requis_role_security_fournis"
+          eType="#//FonctionServeur/attachment_Database_Requis_role_Security_fournis"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachment_database_fournis_role_security_requis"
+          eType="#//FonctionServeur/attachment_Database_Fournis_role_Security_Requis"/>
+    </eClassifiers>
   </eSubpackages>
+  <eSubpackages name="newPackage3"/>
 </ecore:EPackage>
