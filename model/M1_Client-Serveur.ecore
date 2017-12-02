@@ -97,18 +97,18 @@
     <eClassifiers xsi:type="ecore:EClass" name="PortFournis_database_Security" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsFournis #//FonctionServeur/InterfaceDatabase"/>
     <eClassifiers xsi:type="ecore:EClass" name="PortRequis_database_Security" eSuperTypes="projecttArchitectural.ecore#//PortsComposantsRequis #//FonctionServeur/InterfaceDatabase"/>
     <eClassifiers xsi:type="ecore:EClass" name="AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass20" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass21" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass22" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass23" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass24" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass25" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass26" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass27" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass28" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass29" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass30" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NewEClass31" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass20" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass21" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass22" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass23" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass24" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass25" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass26" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass27" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass28" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass29" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass30" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentsRequisFournis"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass31" eSuperTypes="#//FonctionServeur/AttachmentServeurDetail projecttArchitectural.ecore#//AttachmentFournisRequis"/>
     <eClassifiers xsi:type="ecore:EClass" name="ConnecteurServeurD" eSuperTypes="projecttArchitectural.ecore#//Connecteurs">
       <eStructuralFeatures xsi:type="ecore:EReference" name="glueserveur" upperBound="-1"
           eType="#//FonctionServeur/GlueServeur" containment="true"/>
