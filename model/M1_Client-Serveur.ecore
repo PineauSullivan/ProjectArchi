@@ -278,5 +278,4 @@
           eType="#//FonctionServeur/attachment_Database_Fournis_role_Security_Requis"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="newPackage3"/>
 </ecore:EPackage>

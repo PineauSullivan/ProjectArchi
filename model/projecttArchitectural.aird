@@ -1521,15 +1521,6 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_NvM2gNN2EeeVKs-3zh_E_A" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_NvM2gdN2EeeVKs-3zh_E_A" type="Sirius" element="_Nt5O8NN2EeeVKs-3zh_E_A" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_BiWDsNeKEeenuZUHSWF4hA" type="2002" element="_Bhg9QNeKEeenuZUHSWF4hA">
-          <children xmi:type="notation:Node" xmi:id="_BiWqwNeKEeenuZUHSWF4hA" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_BiXR0NeKEeenuZUHSWF4hA" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_BiXR0deKEeenuZUHSWF4hA"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_BiXR0teKEeenuZUHSWF4hA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_BiWDsdeKEeenuZUHSWF4hA" fontName="Ubuntu" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BiWDsteKEeenuZUHSWF4hA" x="-1105" y="-1125" width="10720" height="5094"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_R9iE4NOGEeeVKs-3zh_E_A" type="2002" element="_R8_5YNOGEeeVKs-3zh_E_A">
           <children xmi:type="notation:Node" xmi:id="_R9jTANOGEeeVKs-3zh_E_A" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_R9jTAdOGEeeVKs-3zh_E_A" type="7001">
@@ -7440,17 +7431,6 @@
         </endLabelStyle>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Bhg9QNeKEeenuZUHSWF4hA" name="newPackage3" width="24" height="16">
-      <target xmi:type="ecore:EPackage" href="M1_Client-Serveur.ecore#//newPackage3"/>
-      <semanticElements xmi:type="ecore:EPackage" href="M1_Client-Serveur.ecore#//newPackage3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_BhhkUNeKEeenuZUHSWF4hA" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="217,210,220">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']/@containerMappings[name='Dropped%20Package']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']/@containerMappings[name='Dropped%20Package']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_Nt5O89N2EeeVKs-3zh_E_A"/>
