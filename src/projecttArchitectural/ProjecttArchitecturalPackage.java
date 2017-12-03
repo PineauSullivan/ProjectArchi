@@ -66,22 +66,22 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int ELEMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__CONTRAINTES = 0;
-
-	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__CONFIGURATIONS = 1;
+	int ELEMENT__CONFIGURATIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT__CONTRAINTES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Element</em>' class.
@@ -112,15 +112,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int CONFIGURATIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURATIONS__CONTRAINTES = ELEMENT__CONTRAINTES;
-
-	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,6 +119,15 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONFIGURATIONS__CONFIGURATIONS = ELEMENT__CONFIGURATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATIONS__CONTRAINTES = ELEMENT__CONTRAINTES;
 
 	/**
 	 * The feature id for the '<em><b>Lien</b></em>' containment reference list.
@@ -167,15 +167,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int COMPOSANTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSANTS__CONTRAINTES = ELEMENT__CONTRAINTES;
-
-	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,13 +176,13 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int COMPOSANTS__CONFIGURATIONS = ELEMENT__CONFIGURATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Propriétés</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSANTS__PROPRIÉTÉS = ELEMENT_FEATURE_COUNT + 0;
+	int COMPOSANTS__CONTRAINTES = ELEMENT__CONTRAINTES;
 
 	/**
 	 * The feature id for the '<em><b>Interfacecomposants</b></em>' containment reference list.
@@ -200,7 +191,16 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSANTS__INTERFACECOMPOSANTS = ELEMENT_FEATURE_COUNT + 1;
+	int COMPOSANTS__INTERFACECOMPOSANTS = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Propriétés</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSANTS__PROPRIÉTÉS = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Composants</em>' class.
@@ -231,15 +231,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int CONNECTEURS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTEURS__CONTRAINTES = ELEMENT__CONTRAINTES;
-
-	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,6 +238,15 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTEURS__CONFIGURATIONS = ELEMENT__CONFIGURATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Contraintes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTEURS__CONTRAINTES = ELEMENT__CONTRAINTES;
 
 	/**
 	 * The feature id for the '<em><b>Glue</b></em>' containment reference list.
@@ -463,22 +463,22 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int INTERFACE_COMPOSANTS = 10;
 
 	/**
-	 * The feature id for the '<em><b>Portscompasants</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_COMPOSANTS__PORTSCOMPASANTS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Servicecomposants</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_COMPOSANTS__SERVICECOMPOSANTS = 1;
+	int INTERFACE_COMPOSANTS__SERVICECOMPOSANTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Portscompasants</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_COMPOSANTS__PORTSCOMPASANTS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Interface Composants</em>' class.
@@ -499,32 +499,32 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int INTERFACE_COMPOSANTS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projecttArchitectural.impl.PortsCompasantsImpl <em>Ports Compasants</em>}' class.
+	 * The meta object id for the '{@link projecttArchitectural.impl.PortsComposantsImpl <em>Ports Composants</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see projecttArchitectural.impl.PortsCompasantsImpl
-	 * @see projecttArchitectural.impl.ProjecttArchitecturalPackageImpl#getPortsCompasants()
+	 * @see projecttArchitectural.impl.PortsComposantsImpl
+	 * @see projecttArchitectural.impl.ProjecttArchitecturalPackageImpl#getPortsComposants()
 	 * @generated
 	 */
-	int PORTS_COMPASANTS = 11;
+	int PORTS_COMPOSANTS = 11;
 
 	/**
-	 * The number of structural features of the '<em>Ports Compasants</em>' class.
+	 * The number of structural features of the '<em>Ports Composants</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPASANTS_FEATURE_COUNT = 0;
+	int PORTS_COMPOSANTS_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Ports Compasants</em>' class.
+	 * The number of operations of the '<em>Ports Composants</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPASANTS_OPERATION_COUNT = 0;
+	int PORTS_COMPOSANTS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link projecttArchitectural.impl.ServiceComposantsImpl <em>Service Composants</em>}' class.
@@ -571,7 +571,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPOSANTS_REQUIS_FEATURE_COUNT = PORTS_COMPASANTS_FEATURE_COUNT + 0;
+	int PORTS_COMPOSANTS_REQUIS_FEATURE_COUNT = PORTS_COMPOSANTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Ports Composants Requis</em>' class.
@@ -580,7 +580,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPOSANTS_REQUIS_OPERATION_COUNT = PORTS_COMPASANTS_OPERATION_COUNT + 0;
+	int PORTS_COMPOSANTS_REQUIS_OPERATION_COUNT = PORTS_COMPOSANTS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link projecttArchitectural.impl.PortsComposantsFournisImpl <em>Ports Composants Fournis</em>}' class.
@@ -599,7 +599,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPOSANTS_FOURNIS_FEATURE_COUNT = PORTS_COMPASANTS_FEATURE_COUNT + 0;
+	int PORTS_COMPOSANTS_FOURNIS_FEATURE_COUNT = PORTS_COMPOSANTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Ports Composants Fournis</em>' class.
@@ -608,7 +608,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTS_COMPOSANTS_FOURNIS_OPERATION_COUNT = PORTS_COMPASANTS_OPERATION_COUNT + 0;
+	int PORTS_COMPOSANTS_FOURNIS_OPERATION_COUNT = PORTS_COMPOSANTS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link projecttArchitectural.impl.ServiceConposantsRequisImpl <em>Service Conposants Requis</em>}' class.
@@ -826,7 +826,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int BINDING_FOURNIS = 22;
 
 	/**
-	 * The feature id for the '<em><b>Portscomposantsfournis</b></em>' reference.
+	 * The feature id for the '<em><b>Portscomposantsfournis</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -835,22 +835,13 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS = BINDING_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Roleconnecteursfournis</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINDING_FOURNIS__ROLECONNECTEURSFOURNIS = BINDING_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Binding Fournis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_FOURNIS_FEATURE_COUNT = BINDING_FEATURE_COUNT + 2;
+	int BINDING_FOURNIS_FEATURE_COUNT = BINDING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Binding Fournis</em>' class.
@@ -872,7 +863,7 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int BINDING_REQUIS = 23;
 
 	/**
-	 * The feature id for the '<em><b>Portscomposantsrequis</b></em>' reference.
+	 * The feature id for the '<em><b>Portscomposantsrequis</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -881,22 +872,13 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	int BINDING_REQUIS__PORTSCOMPOSANTSREQUIS = BINDING_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Roleconnecteursrequis</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINDING_REQUIS__ROLECONNECTEURSREQUIS = BINDING_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Binding Requis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_REQUIS_FEATURE_COUNT = BINDING_FEATURE_COUNT + 2;
+	int BINDING_REQUIS_FEATURE_COUNT = BINDING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Binding Requis</em>' class.
@@ -1011,17 +993,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EClass getElement();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Element#getContraintes <em>Contraintes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contraintes</em>'.
-	 * @see projecttArchitectural.Element#getContraintes()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EReference getElement_Contraintes();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Element#getConfigurations <em>Configurations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,6 +1002,17 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getElement_Configurations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Element#getContraintes <em>Contraintes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contraintes</em>'.
+	 * @see projecttArchitectural.Element#getContraintes()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EReference getElement_Contraintes();
 
 	/**
 	 * Returns the meta object for class '{@link projecttArchitectural.Configurations <em>Configurations</em>}'.
@@ -1064,17 +1046,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EClass getComposants();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Composants#getPropriétés <em>Propriétés</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Propriétés</em>'.
-	 * @see projecttArchitectural.Composants#getPropriétés()
-	 * @see #getComposants()
-	 * @generated
-	 */
-	EReference getComposants_Propriétés();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Composants#getInterfacecomposants <em>Interfacecomposants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1084,6 +1055,17 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComposants_Interfacecomposants();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.Composants#getPropriétés <em>Propriétés</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Propriétés</em>'.
+	 * @see projecttArchitectural.Composants#getPropriétés()
+	 * @see #getComposants()
+	 * @generated
+	 */
+	EReference getComposants_Propriétés();
 
 	/**
 	 * Returns the meta object for class '{@link projecttArchitectural.Connecteurs <em>Connecteurs</em>}'.
@@ -1188,17 +1170,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EClass getInterfaceComposants();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.InterfaceComposants#getPortscompasants <em>Portscompasants</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Portscompasants</em>'.
-	 * @see projecttArchitectural.InterfaceComposants#getPortscompasants()
-	 * @see #getInterfaceComposants()
-	 * @generated
-	 */
-	EReference getInterfaceComposants_Portscompasants();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.InterfaceComposants#getServicecomposants <em>Servicecomposants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1210,14 +1181,25 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EReference getInterfaceComposants_Servicecomposants();
 
 	/**
-	 * Returns the meta object for class '{@link projecttArchitectural.PortsCompasants <em>Ports Compasants</em>}'.
+	 * Returns the meta object for the containment reference list '{@link projecttArchitectural.InterfaceComposants#getPortscompasants <em>Portscompasants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ports Compasants</em>'.
-	 * @see projecttArchitectural.PortsCompasants
+	 * @return the meta object for the containment reference list '<em>Portscompasants</em>'.
+	 * @see projecttArchitectural.InterfaceComposants#getPortscompasants()
+	 * @see #getInterfaceComposants()
 	 * @generated
 	 */
-	EClass getPortsCompasants();
+	EReference getInterfaceComposants_Portscompasants();
+
+	/**
+	 * Returns the meta object for class '{@link projecttArchitectural.PortsComposants <em>Ports Composants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ports Composants</em>'.
+	 * @see projecttArchitectural.PortsComposants
+	 * @generated
+	 */
+	EClass getPortsComposants();
 
 	/**
 	 * Returns the meta object for class '{@link projecttArchitectural.ServiceComposants <em>Service Composants</em>}'.
@@ -1341,26 +1323,15 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EClass getBindingFournis();
 
 	/**
-	 * Returns the meta object for the reference '{@link projecttArchitectural.BindingFournis#getPortscomposantsfournis <em>Portscomposantsfournis</em>}'.
+	 * Returns the meta object for the reference list '{@link projecttArchitectural.BindingFournis#getPortscomposantsfournis <em>Portscomposantsfournis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Portscomposantsfournis</em>'.
+	 * @return the meta object for the reference list '<em>Portscomposantsfournis</em>'.
 	 * @see projecttArchitectural.BindingFournis#getPortscomposantsfournis()
 	 * @see #getBindingFournis()
 	 * @generated
 	 */
 	EReference getBindingFournis_Portscomposantsfournis();
-
-	/**
-	 * Returns the meta object for the reference '{@link projecttArchitectural.BindingFournis#getRoleconnecteursfournis <em>Roleconnecteursfournis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roleconnecteursfournis</em>'.
-	 * @see projecttArchitectural.BindingFournis#getRoleconnecteursfournis()
-	 * @see #getBindingFournis()
-	 * @generated
-	 */
-	EReference getBindingFournis_Roleconnecteursfournis();
 
 	/**
 	 * Returns the meta object for class '{@link projecttArchitectural.BindingRequis <em>Binding Requis</em>}'.
@@ -1373,26 +1344,15 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 	EClass getBindingRequis();
 
 	/**
-	 * Returns the meta object for the reference '{@link projecttArchitectural.BindingRequis#getPortscomposantsrequis <em>Portscomposantsrequis</em>}'.
+	 * Returns the meta object for the reference list '{@link projecttArchitectural.BindingRequis#getPortscomposantsrequis <em>Portscomposantsrequis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Portscomposantsrequis</em>'.
+	 * @return the meta object for the reference list '<em>Portscomposantsrequis</em>'.
 	 * @see projecttArchitectural.BindingRequis#getPortscomposantsrequis()
 	 * @see #getBindingRequis()
 	 * @generated
 	 */
 	EReference getBindingRequis_Portscomposantsrequis();
-
-	/**
-	 * Returns the meta object for the reference '{@link projecttArchitectural.BindingRequis#getRoleconnecteursrequis <em>Roleconnecteursrequis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roleconnecteursrequis</em>'.
-	 * @see projecttArchitectural.BindingRequis#getRoleconnecteursrequis()
-	 * @see #getBindingRequis()
-	 * @generated
-	 */
-	EReference getBindingRequis_Roleconnecteursrequis();
 
 	/**
 	 * Returns the meta object for class '{@link projecttArchitectural.AttachmentsRequisFournis <em>Attachments Requis Fournis</em>}'.
@@ -1492,20 +1452,20 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EClass ELEMENT = eINSTANCE.getElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Contraintes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT__CONTRAINTES = eINSTANCE.getElement_Contraintes();
-
-		/**
 		 * The meta object literal for the '<em><b>Configurations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ELEMENT__CONFIGURATIONS = eINSTANCE.getElement_Configurations();
+
+		/**
+		 * The meta object literal for the '<em><b>Contraintes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT__CONTRAINTES = eINSTANCE.getElement_Contraintes();
 
 		/**
 		 * The meta object literal for the '{@link projecttArchitectural.impl.ConfigurationsImpl <em>Configurations</em>}' class.
@@ -1536,20 +1496,20 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EClass COMPOSANTS = eINSTANCE.getComposants();
 
 		/**
-		 * The meta object literal for the '<em><b>Propriétés</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSANTS__PROPRIÉTÉS = eINSTANCE.getComposants_Propriétés();
-
-		/**
 		 * The meta object literal for the '<em><b>Interfacecomposants</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference COMPOSANTS__INTERFACECOMPOSANTS = eINSTANCE.getComposants_Interfacecomposants();
+
+		/**
+		 * The meta object literal for the '<em><b>Propriétés</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSANTS__PROPRIÉTÉS = eINSTANCE.getComposants_Propriétés();
 
 		/**
 		 * The meta object literal for the '{@link projecttArchitectural.impl.ConnecteursImpl <em>Connecteurs</em>}' class.
@@ -1648,14 +1608,6 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EClass INTERFACE_COMPOSANTS = eINSTANCE.getInterfaceComposants();
 
 		/**
-		 * The meta object literal for the '<em><b>Portscompasants</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERFACE_COMPOSANTS__PORTSCOMPASANTS = eINSTANCE.getInterfaceComposants_Portscompasants();
-
-		/**
 		 * The meta object literal for the '<em><b>Servicecomposants</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1664,14 +1616,22 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EReference INTERFACE_COMPOSANTS__SERVICECOMPOSANTS = eINSTANCE.getInterfaceComposants_Servicecomposants();
 
 		/**
-		 * The meta object literal for the '{@link projecttArchitectural.impl.PortsCompasantsImpl <em>Ports Compasants</em>}' class.
+		 * The meta object literal for the '<em><b>Portscompasants</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see projecttArchitectural.impl.PortsCompasantsImpl
-		 * @see projecttArchitectural.impl.ProjecttArchitecturalPackageImpl#getPortsCompasants()
 		 * @generated
 		 */
-		EClass PORTS_COMPASANTS = eINSTANCE.getPortsCompasants();
+		EReference INTERFACE_COMPOSANTS__PORTSCOMPASANTS = eINSTANCE.getInterfaceComposants_Portscompasants();
+
+		/**
+		 * The meta object literal for the '{@link projecttArchitectural.impl.PortsComposantsImpl <em>Ports Composants</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projecttArchitectural.impl.PortsComposantsImpl
+		 * @see projecttArchitectural.impl.ProjecttArchitecturalPackageImpl#getPortsComposants()
+		 * @generated
+		 */
+		EClass PORTS_COMPOSANTS = eINSTANCE.getPortsComposants();
 
 		/**
 		 * The meta object literal for the '{@link projecttArchitectural.impl.ServiceComposantsImpl <em>Service Composants</em>}' class.
@@ -1792,20 +1752,12 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EClass BINDING_FOURNIS = eINSTANCE.getBindingFournis();
 
 		/**
-		 * The meta object literal for the '<em><b>Portscomposantsfournis</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Portscomposantsfournis</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS = eINSTANCE.getBindingFournis_Portscomposantsfournis();
-
-		/**
-		 * The meta object literal for the '<em><b>Roleconnecteursfournis</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BINDING_FOURNIS__ROLECONNECTEURSFOURNIS = eINSTANCE.getBindingFournis_Roleconnecteursfournis();
 
 		/**
 		 * The meta object literal for the '{@link projecttArchitectural.impl.BindingRequisImpl <em>Binding Requis</em>}' class.
@@ -1818,20 +1770,12 @@ public interface ProjecttArchitecturalPackage extends EPackage {
 		EClass BINDING_REQUIS = eINSTANCE.getBindingRequis();
 
 		/**
-		 * The meta object literal for the '<em><b>Portscomposantsrequis</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Portscomposantsrequis</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference BINDING_REQUIS__PORTSCOMPOSANTSREQUIS = eINSTANCE.getBindingRequis_Portscomposantsrequis();
-
-		/**
-		 * The meta object literal for the '<em><b>Roleconnecteursrequis</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BINDING_REQUIS__ROLECONNECTEURSREQUIS = eINSTANCE.getBindingRequis_Roleconnecteursrequis();
 
 		/**
 		 * The meta object literal for the '{@link projecttArchitectural.impl.AttachmentsRequisFournisImpl <em>Attachments Requis Fournis</em>}' class.

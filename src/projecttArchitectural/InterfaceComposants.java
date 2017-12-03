@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projecttArchitectural.InterfaceComposants#getPortscompasants <em>Portscompasants</em>}</li>
  *   <li>{@link projecttArchitectural.InterfaceComposants#getServicecomposants <em>Servicecomposants</em>}</li>
+ *   <li>{@link projecttArchitectural.InterfaceComposants#getPortscompasants <em>Portscompasants</em>}</li>
  * </ul>
  *
  * @see projecttArchitectural.ProjecttArchitecturalPackage#getInterfaceComposants()
@@ -24,22 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface InterfaceComposants extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Portscompasants</b></em>' containment reference list.
-	 * The list contents are of type {@link projecttArchitectural.PortsCompasants}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Portscompasants</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Portscompasants</em>' containment reference list.
-	 * @see projecttArchitectural.ProjecttArchitecturalPackage#getInterfaceComposants_Portscompasants()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PortsCompasants> getPortscompasants();
-
 	/**
 	 * Returns the value of the '<em><b>Servicecomposants</b></em>' containment reference list.
 	 * The list contents are of type {@link projecttArchitectural.ServiceComposants}.
@@ -55,5 +39,21 @@ public interface InterfaceComposants extends EObject {
 	 * @generated
 	 */
 	EList<ServiceComposants> getServicecomposants();
+
+	/**
+	 * Returns the value of the '<em><b>Portscompasants</b></em>' containment reference list.
+	 * The list contents are of type {@link projecttArchitectural.PortsComposants}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Portscompasants</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Portscompasants</em>' containment reference list.
+	 * @see projecttArchitectural.ProjecttArchitecturalPackage#getInterfaceComposants_Portscompasants()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PortsComposants> getPortscompasants();
 
 } // InterfaceComposants

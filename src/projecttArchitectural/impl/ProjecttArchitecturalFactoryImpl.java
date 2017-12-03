@@ -67,7 +67,7 @@ public class ProjecttArchitecturalFactoryImpl extends EFactoryImpl implements Pr
 			case ProjecttArchitecturalPackage.BINDING: return createBinding();
 			case ProjecttArchitecturalPackage.ATTACHMENT: return createAttachment();
 			case ProjecttArchitecturalPackage.INTERFACE_COMPOSANTS: return createInterfaceComposants();
-			case ProjecttArchitecturalPackage.PORTS_COMPASANTS: return createPortsCompasants();
+			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS: return createPortsComposants();
 			case ProjecttArchitecturalPackage.SERVICE_COMPOSANTS: return createServiceComposants();
 			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS_REQUIS: return createPortsComposantsRequis();
 			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS_FOURNIS: return createPortsComposantsFournis();
@@ -202,9 +202,9 @@ public class ProjecttArchitecturalFactoryImpl extends EFactoryImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortsCompasants createPortsCompasants() {
-		PortsCompasantsImpl portsCompasants = new PortsCompasantsImpl();
-		return portsCompasants;
+	public PortsComposants createPortsComposants() {
+		PortsComposantsImpl portsComposants = new PortsComposantsImpl();
+		return portsComposants;
 	}
 
 	/**

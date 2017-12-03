@@ -22,7 +22,7 @@ import projecttArchitectural.Element;
 import projecttArchitectural.Glue;
 import projecttArchitectural.InterfaceComposants;
 import projecttArchitectural.Lien;
-import projecttArchitectural.PortsCompasants;
+import projecttArchitectural.PortsComposants;
 import projecttArchitectural.PortsComposantsFournis;
 import projecttArchitectural.PortsComposantsRequis;
 import projecttArchitectural.ProjecttArchitecturalFactory;
@@ -36,6 +36,18 @@ import projecttArchitectural.RoleConnecteursRequis;
 import projecttArchitectural.ServiceComposants;
 import projecttArchitectural.ServiceConposantsFournis;
 import projecttArchitectural.ServiceConposantsRequis;
+
+import systeme.ClientServeur.ClientServeurPackage;
+
+import systeme.ClientServeur.impl.ClientServeurPackageImpl;
+
+import systeme.FonctionServeur.FonctionServeurPackage;
+
+import systeme.FonctionServeur.impl.FonctionServeurPackageImpl;
+
+import systeme.SystemePackage;
+
+import systeme.impl.SystemePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -126,7 +138,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass portsCompasantsEClass = null;
+	private EClass portsComposantsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,11 +284,22 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		SystemePackageImpl theSystemePackage = (SystemePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SystemePackage.eNS_URI) instanceof SystemePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SystemePackage.eNS_URI) : SystemePackage.eINSTANCE);
+		ClientServeurPackageImpl theClientServeurPackage = (ClientServeurPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClientServeurPackage.eNS_URI) instanceof ClientServeurPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClientServeurPackage.eNS_URI) : ClientServeurPackage.eINSTANCE);
+		FonctionServeurPackageImpl theFonctionServeurPackage = (FonctionServeurPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FonctionServeurPackage.eNS_URI) instanceof FonctionServeurPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FonctionServeurPackage.eNS_URI) : FonctionServeurPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theProjecttArchitecturalPackage.createPackageContents();
+		theSystemePackage.createPackageContents();
+		theClientServeurPackage.createPackageContents();
+		theFonctionServeurPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theProjecttArchitecturalPackage.initializePackageContents();
+		theSystemePackage.initializePackageContents();
+		theClientServeurPackage.initializePackageContents();
+		theFonctionServeurPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theProjecttArchitecturalPackage.freeze();
@@ -301,7 +324,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Contraintes() {
+	public EReference getElement_Configurations() {
 		return (EReference)elementEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -310,7 +333,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Configurations() {
+	public EReference getElement_Contraintes() {
 		return (EReference)elementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -346,7 +369,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComposants_Propriétés() {
+	public EReference getComposants_Interfacecomposants() {
 		return (EReference)composantsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -355,7 +378,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComposants_Interfacecomposants() {
+	public EReference getComposants_Propriétés() {
 		return (EReference)composantsEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -454,7 +477,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInterfaceComposants_Portscompasants() {
+	public EReference getInterfaceComposants_Servicecomposants() {
 		return (EReference)interfaceComposantsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -463,7 +486,7 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInterfaceComposants_Servicecomposants() {
+	public EReference getInterfaceComposants_Portscompasants() {
 		return (EReference)interfaceComposantsEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -472,8 +495,8 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPortsCompasants() {
-		return portsCompasantsEClass;
+	public EClass getPortsComposants() {
+		return portsComposantsEClass;
 	}
 
 	/**
@@ -598,15 +621,6 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBindingFournis_Roleconnecteursfournis() {
-		return (EReference)bindingFournisEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBindingRequis() {
 		return bindingRequisEClass;
 	}
@@ -618,15 +632,6 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 	 */
 	public EReference getBindingRequis_Portscomposantsrequis() {
 		return (EReference)bindingRequisEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBindingRequis_Roleconnecteursrequis() {
-		return (EReference)bindingRequisEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -712,15 +717,15 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 
 		// Create classes and their features
 		elementEClass = createEClass(ELEMENT);
-		createEReference(elementEClass, ELEMENT__CONTRAINTES);
 		createEReference(elementEClass, ELEMENT__CONFIGURATIONS);
+		createEReference(elementEClass, ELEMENT__CONTRAINTES);
 
 		configurationsEClass = createEClass(CONFIGURATIONS);
 		createEReference(configurationsEClass, CONFIGURATIONS__LIEN);
 
 		composantsEClass = createEClass(COMPOSANTS);
-		createEReference(composantsEClass, COMPOSANTS__PROPRIÉTÉS);
 		createEReference(composantsEClass, COMPOSANTS__INTERFACECOMPOSANTS);
+		createEReference(composantsEClass, COMPOSANTS__PROPRIÉTÉS);
 
 		connecteursEClass = createEClass(CONNECTEURS);
 		createEReference(connecteursEClass, CONNECTEURS__GLUE);
@@ -739,10 +744,10 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 		attachmentEClass = createEClass(ATTACHMENT);
 
 		interfaceComposantsEClass = createEClass(INTERFACE_COMPOSANTS);
-		createEReference(interfaceComposantsEClass, INTERFACE_COMPOSANTS__PORTSCOMPASANTS);
 		createEReference(interfaceComposantsEClass, INTERFACE_COMPOSANTS__SERVICECOMPOSANTS);
+		createEReference(interfaceComposantsEClass, INTERFACE_COMPOSANTS__PORTSCOMPASANTS);
 
-		portsCompasantsEClass = createEClass(PORTS_COMPASANTS);
+		portsComposantsEClass = createEClass(PORTS_COMPOSANTS);
 
 		serviceComposantsEClass = createEClass(SERVICE_COMPOSANTS);
 
@@ -767,11 +772,9 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 
 		bindingFournisEClass = createEClass(BINDING_FOURNIS);
 		createEReference(bindingFournisEClass, BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS);
-		createEReference(bindingFournisEClass, BINDING_FOURNIS__ROLECONNECTEURSFOURNIS);
 
 		bindingRequisEClass = createEClass(BINDING_REQUIS);
 		createEReference(bindingRequisEClass, BINDING_REQUIS__PORTSCOMPOSANTSREQUIS);
-		createEReference(bindingRequisEClass, BINDING_REQUIS__ROLECONNECTEURSREQUIS);
 
 		attachmentsRequisFournisEClass = createEClass(ATTACHMENTS_REQUIS_FOURNIS);
 		createEReference(attachmentsRequisFournisEClass, ATTACHMENTS_REQUIS_FOURNIS__PORTSCOMPOSANTSREQUIS);
@@ -817,8 +820,8 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 		propriétésNonFonctionnellesEClass.getESuperTypes().add(this.getPropriétés());
 		bindingEClass.getESuperTypes().add(this.getLien());
 		attachmentEClass.getESuperTypes().add(this.getLien());
-		portsComposantsRequisEClass.getESuperTypes().add(this.getPortsCompasants());
-		portsComposantsFournisEClass.getESuperTypes().add(this.getPortsCompasants());
+		portsComposantsRequisEClass.getESuperTypes().add(this.getPortsComposants());
+		portsComposantsFournisEClass.getESuperTypes().add(this.getPortsComposants());
 		serviceConposantsRequisEClass.getESuperTypes().add(this.getServiceComposants());
 		serviceConposantsFournisEClass.getESuperTypes().add(this.getServiceComposants());
 		roleConnecteursFournisEClass.getESuperTypes().add(this.getRoleConnecteurs());
@@ -830,15 +833,15 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElement_Contraintes(), this.getContraintes(), null, "contraintes", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getElement_Configurations(), this.getConfigurations(), null, "configurations", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_Contraintes(), this.getContraintes(), null, "contraintes", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(configurationsEClass, Configurations.class, "Configurations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConfigurations_Lien(), this.getLien(), null, "lien", null, 0, -1, Configurations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(composantsEClass, Composants.class, "Composants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComposants_Propriétés(), this.getPropriétés(), null, "propriétés", null, 0, -1, Composants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposants_Interfacecomposants(), this.getInterfaceComposants(), null, "interfacecomposants", null, 0, -1, Composants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposants_Propriétés(), this.getPropriétés(), null, "propriétés", null, 0, -1, Composants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connecteursEClass, Connecteurs.class, "Connecteurs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnecteurs_Glue(), this.getGlue(), null, "glue", null, 0, -1, Connecteurs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -857,10 +860,10 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 		initEClass(attachmentEClass, Attachment.class, "Attachment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(interfaceComposantsEClass, InterfaceComposants.class, "InterfaceComposants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterfaceComposants_Portscompasants(), this.getPortsCompasants(), null, "portscompasants", null, 0, -1, InterfaceComposants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInterfaceComposants_Servicecomposants(), this.getServiceComposants(), null, "servicecomposants", null, 0, -1, InterfaceComposants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceComposants_Portscompasants(), this.getPortsComposants(), null, "portscompasants", null, 0, -1, InterfaceComposants.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(portsCompasantsEClass, PortsCompasants.class, "PortsCompasants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(portsComposantsEClass, PortsComposants.class, "PortsComposants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(serviceComposantsEClass, ServiceComposants.class, "ServiceComposants", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -884,12 +887,10 @@ public class ProjecttArchitecturalPackageImpl extends EPackageImpl implements Pr
 		initEClass(contraintesEClass, Contraintes.class, "Contraintes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(bindingFournisEClass, BindingFournis.class, "BindingFournis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindingFournis_Portscomposantsfournis(), this.getPortsComposantsFournis(), null, "portscomposantsfournis", null, 0, 1, BindingFournis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBindingFournis_Roleconnecteursfournis(), this.getRoleConnecteursFournis(), null, "roleconnecteursfournis", null, 0, 1, BindingFournis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindingFournis_Portscomposantsfournis(), this.getPortsComposantsFournis(), null, "portscomposantsfournis", null, 2, 2, BindingFournis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bindingRequisEClass, BindingRequis.class, "BindingRequis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindingRequis_Portscomposantsrequis(), this.getPortsComposantsRequis(), null, "portscomposantsrequis", null, 0, 1, BindingRequis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBindingRequis_Roleconnecteursrequis(), this.getRoleConnecteursRequis(), null, "roleconnecteursrequis", null, 0, 1, BindingRequis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindingRequis_Portscomposantsrequis(), this.getPortsComposantsRequis(), null, "portscomposantsrequis", null, 2, 2, BindingRequis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attachmentsRequisFournisEClass, AttachmentsRequisFournis.class, "AttachmentsRequisFournis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttachmentsRequisFournis_Portscomposantsrequis(), this.getPortsComposantsRequis(), null, "portscomposantsrequis", null, 0, 1, AttachmentsRequisFournis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

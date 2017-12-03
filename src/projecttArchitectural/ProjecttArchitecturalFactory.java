@@ -121,13 +121,13 @@ public interface ProjecttArchitecturalFactory extends EFactory {
 	InterfaceComposants createInterfaceComposants();
 
 	/**
-	 * Returns a new object of class '<em>Ports Compasants</em>'.
+	 * Returns a new object of class '<em>Ports Composants</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ports Compasants</em>'.
+	 * @return a new object of class '<em>Ports Composants</em>'.
 	 * @generated
 	 */
-	PortsCompasants createPortsCompasants();
+	PortsComposants createPortsComposants();
 
 	/**
 	 * Returns a new object of class '<em>Service Composants</em>'.

@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projecttArchitectural.Composants#getPropriétés <em>Propriétés</em>}</li>
  *   <li>{@link projecttArchitectural.Composants#getInterfacecomposants <em>Interfacecomposants</em>}</li>
+ *   <li>{@link projecttArchitectural.Composants#getPropriétés <em>Propriétés</em>}</li>
  * </ul>
  *
  * @see projecttArchitectural.ProjecttArchitecturalPackage#getComposants()
@@ -22,22 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Composants extends Element {
-	/**
-	 * Returns the value of the '<em><b>Propriétés</b></em>' containment reference list.
-	 * The list contents are of type {@link projecttArchitectural.Propriétés}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Propriétés</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Propriétés</em>' containment reference list.
-	 * @see projecttArchitectural.ProjecttArchitecturalPackage#getComposants_Propriétés()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Propriétés> getPropriétés();
-
 	/**
 	 * Returns the value of the '<em><b>Interfacecomposants</b></em>' containment reference list.
 	 * The list contents are of type {@link projecttArchitectural.InterfaceComposants}.
@@ -53,5 +37,21 @@ public interface Composants extends Element {
 	 * @generated
 	 */
 	EList<InterfaceComposants> getInterfacecomposants();
+
+	/**
+	 * Returns the value of the '<em><b>Propriétés</b></em>' containment reference list.
+	 * The list contents are of type {@link projecttArchitectural.Propriétés}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Propriétés</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Propriétés</em>' containment reference list.
+	 * @see projecttArchitectural.ProjecttArchitecturalPackage#getComposants_Propriétés()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Propriétés> getPropriétés();
 
 } // Composants

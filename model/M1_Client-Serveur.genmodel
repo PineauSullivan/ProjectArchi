@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ProjectArchi/src" modelPluginID="ProjectArchi"
+    modelName="M1_Client-Serveur" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>M1_Client-Serveur.ecore</foreignModel>
+  <genPackages prefix="Systeme" disposableProviderFactory="true" ecorePackage="M1_Client-Serveur.ecore#/">
+    <genClasses ecoreClass="M1_Client-Serveur.ecore#//Systeme">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//Systeme/configurationclientserveur"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//Systeme/serveurdetail"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//Systeme/bindingrequiscs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//Systeme/bindingfourniscs"/>
+    </genClasses>
+    <genClasses ecoreClass="M1_Client-Serveur.ecore#//BindingRequisCS">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//BindingRequisCS/portrequisconfigcs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//BindingRequisCS/port_receive_request"/>
+    </genClasses>
+    <genClasses ecoreClass="M1_Client-Serveur.ecore#//BindingFournisCS">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//BindingFournisCS/port_receive_request"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//BindingFournisCS/portfourniscs"/>
+    </genClasses>
+    <nestedGenPackages prefix="ClientServeur" disposableProviderFactory="true" ecorePackage="M1_Client-Serveur.ecore#//ClientServeur">
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/ComposantClient">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ComposantClient/interfaceclient"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/ComposantServer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ComposantServer/interfaceserveur"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/InterfaceClient">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/InterfaceClient/port_send_request"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/InterfaceClient/port_receive_client"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/InterfaceServeur">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/InterfaceServeur/port_receive_request"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/InterfaceServeur/port_send_serveur"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Port_Receive_Request"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Port_Send_Client"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/RPC">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/gluecs1"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/gluecs2"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/callerclient"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/callerserveur"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/calledclient"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/RPC/calledserveur"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/CallerClient"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/CallerServeur"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Attachment_SendRequest_to_Caller">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_SendRequest_to_Caller/port_send_request"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_SendRequest_to_Caller/callerserveur"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/CalledClient"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/CalledServeur"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Attachment_Receive_request">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_Receive_request/port_receive_request"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_Receive_request/calledserveur"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Send_to_Client">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Send_to_Client/port_send_serveur"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Send_to_Client/callerclient"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Receive_of_Client">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Receive_of_Client/port_receive_client"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/Attachment_server_Receive_of_Client/calledclient"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Port_Send_Serveur"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/Port_Receive_Client"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/GlueCS1">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/GlueCS1/callerclient"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/GlueCS1/calledclient"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/composantclient"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/composantserver"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/rpc"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/attachment_sendrequest_to_caller"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/attachment_receive_request"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/attachment_server_send_to_client"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/ConfigurationClientServeur/attachment_server_receive_of_client"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//ClientServeur/GlueCS2">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/GlueCS2/callerserveur"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//ClientServeur/GlueCS2/calledserveur"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="FonctionServeur" disposableProviderFactory="true" ecorePackage="M1_Client-Serveur.ecore#//FonctionServeur">
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/ConnectionManager">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnectionManager/interfaceconnectionmanager"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/SecurityManager">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/SecurityManager/interfacesecuritymanager"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/Database">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/Database/interfacedatabase"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portrequisconfigcs"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portfourniscs"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portfournis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portrequis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portfournis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceConnectionManager/portrequis_connectionmanager_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/interfaceSecurityManager">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/interfaceSecurityManager/portfournis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/interfaceSecurityManager/portrequis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/interfaceSecurityManager/portfournis_security_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/interfaceSecurityManager/portrequis_security_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/InterfaceDatabase">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceDatabase/portfournis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceDatabase/portrequis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceDatabase/portfournis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/InterfaceDatabase/portrequis_database_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_ConnectionManager_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_ConnectionManager_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_ConnectionManager_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_ConnectionManager_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_Security_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_Security_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_Security_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_Security_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_database_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_database_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournis_database_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequis_database_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_database_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_database_Requis/portfournis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_database_Requis/rolerequis_database_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_security_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_security_fournis/portrequis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_security_fournis/rolefournis_security_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_security_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_security_Requis/portfournis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Fournis_role_security_Requis/rolerequis_security_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_database_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_database_fournis/portrequis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_connectionM_Requis_role_database_fournis/rolefournis_database_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Connection_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Connection_fournis/portrequis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Connection_fournis/rolefournis_connectionmanager_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Connection_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Connection_Requis/portfournis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Connection_Requis/rolerequis_connectionmanager_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Database_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Database_fournis/portrequis_security_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Requis_role_Database_fournis/rolefournis_database_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Database_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Database_Requis/rolerequis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Security_Fournis_role_Database_Requis/portfournis_security_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_connection_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_connection_fournis/portrequis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_connection_fournis/rolefournis_connectionmanager_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Connection_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Connection_Requis/portfournis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Connection_Requis/rolerequis_connectionmanager_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_Security_fournis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_Security_fournis/portrequis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Requis_role_Security_fournis/rolefournis_security_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Security_Requis">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Security_Requis/portfournis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/attachment_Database_Fournis_role_Security_Requis/rolerequis_security_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur1"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur2"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur3"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur4"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur5"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/glueserveur6"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_security_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_security_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolefournis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ConnecteurServeurD/rolerequis_database_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur1">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur1/rolefournis_connectionmanager_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur1/rolerequis_connectionmanager_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_ConnectionManager_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_ConnectionManager_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_ConnectionManager_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_ConnectionManager_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_Security_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_Security_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_Security_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_Security_Database"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_Database_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_Database_Connection"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleFournis_Database_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/RoleRequis_Database_Security"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortRequisConfigCS"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/PortFournisCS"/>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/connectionmanager"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/securitymanager"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/connecteurserveurd"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_connectionm_fournis_role_database_requis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_connectionm_requis_role_database_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_connectionm_requis_role_security_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_connectionm_fournis_role_security_requis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_security_requis_role_connection_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_security_fournis_role_connection_requis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_security_requis_role_database_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_security_fournis_role_database_requis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_database_requis_role_connection_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_database_fournis_role_connection_requis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_database_requis_role_security_fournis"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/ServeurDetail/attachment_database_fournis_role_security_requis"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur2">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur2/rolefournis_connectionmanager_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur2/rolerequis_connectionmanager_security"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur3">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur3/rolefournis_security_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur3/rolerequis_security_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur4">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur4/rolefournis_security_database"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur4/rolerequis_security_database"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur5">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur5/rolefournis_database_connection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur5/rolerequis_database_connection"/>
+      </genClasses>
+      <genClasses ecoreClass="M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur6">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur6/rolefournis_database_security"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference M1_Client-Serveur.ecore#//FonctionServeur/GlueServeur6/rolerequis_database_security"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="ProjecttArchitectural" disposableProviderFactory="true" ecorePackage="projecttArchitectural.ecore#/">
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Element/configurations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Element/contraintes"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Configurations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Configurations/lien"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Composants">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Composants/interfacecomposants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Composants/propriétés"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Connecteurs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Connecteurs/glue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Connecteurs/roleconnecteurs"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Propriétés"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//PropriétésFonctionnelles"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//PropriétésNonFonctionnelles"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Lien"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Binding"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Attachment"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//InterfaceComposants">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//InterfaceComposants/servicecomposants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//InterfaceComposants/portscompasants"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//PortsComposants"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//ServiceComposants"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//PortsComposantsRequis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//PortsComposantsFournis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//ServiceConposantsRequis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//ServiceConposantsFournis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Glue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//Glue/roleconnecteurs"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//RoleConnecteurs"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//RoleConnecteursFournis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//RoleConnecteursRequis"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//Contraintes"/>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//BindingFournis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingFournis/portscomposantsfournis"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//BindingRequis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//BindingRequis/portscomposantsrequis"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentsRequisFournis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/portscomposantsrequis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentsRequisFournis/roleconnecteursfournis"/>
+    </genClasses>
+    <genClasses ecoreClass="projecttArchitectural.ecore#//AttachmentFournisRequis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/portscomposantsfournis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projecttArchitectural.ecore#//AttachmentFournisRequis/roleconnecteursrequis"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

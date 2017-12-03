@@ -139,9 +139,9 @@ public class ProjecttArchitecturalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProjecttArchitecturalPackage.PORTS_COMPASANTS: {
-				PortsCompasants portsCompasants = (PortsCompasants)theEObject;
-				T result = casePortsCompasants(portsCompasants);
+			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS: {
+				PortsComposants portsComposants = (PortsComposants)theEObject;
+				T result = casePortsComposants(portsComposants);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,14 +154,14 @@ public class ProjecttArchitecturalSwitch<T> extends Switch<T> {
 			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS_REQUIS: {
 				PortsComposantsRequis portsComposantsRequis = (PortsComposantsRequis)theEObject;
 				T result = casePortsComposantsRequis(portsComposantsRequis);
-				if (result == null) result = casePortsCompasants(portsComposantsRequis);
+				if (result == null) result = casePortsComposants(portsComposantsRequis);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ProjecttArchitecturalPackage.PORTS_COMPOSANTS_FOURNIS: {
 				PortsComposantsFournis portsComposantsFournis = (PortsComposantsFournis)theEObject;
 				T result = casePortsComposantsFournis(portsComposantsFournis);
-				if (result == null) result = casePortsCompasants(portsComposantsFournis);
+				if (result == null) result = casePortsComposants(portsComposantsFournis);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -413,17 +413,17 @@ public class ProjecttArchitecturalSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ports Compasants</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Ports Composants</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ports Compasants</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Ports Composants</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePortsCompasants(PortsCompasants object) {
+	public T casePortsComposants(PortsComposants object) {
 		return null;
 	}
 

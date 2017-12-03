@@ -112,8 +112,8 @@ public class ProjecttArchitecturalAdapterFactory extends AdapterFactoryImpl {
 				return createInterfaceComposantsAdapter();
 			}
 			@Override
-			public Adapter casePortsCompasants(PortsCompasants object) {
-				return createPortsCompasantsAdapter();
+			public Adapter casePortsComposants(PortsComposants object) {
+				return createPortsComposantsAdapter();
 			}
 			@Override
 			public Adapter caseServiceComposants(ServiceComposants object) {
@@ -346,16 +346,16 @@ public class ProjecttArchitecturalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projecttArchitectural.PortsCompasants <em>Ports Compasants</em>}'.
+	 * Creates a new adapter for an object of class '{@link projecttArchitectural.PortsComposants <em>Ports Composants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projecttArchitectural.PortsCompasants
+	 * @see projecttArchitectural.PortsComposants
 	 * @generated
 	 */
-	public Adapter createPortsCompasantsAdapter() {
+	public Adapter createPortsComposantsAdapter() {
 		return null;
 	}
 

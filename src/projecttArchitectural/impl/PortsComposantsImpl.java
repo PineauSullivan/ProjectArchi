@@ -6,23 +6,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import projecttArchitectural.PortsCompasants;
+import projecttArchitectural.PortsComposants;
 import projecttArchitectural.ProjecttArchitecturalPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ports Compasants</b></em>'.
+ * An implementation of the model object '<em><b>Ports Composants</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class PortsCompasantsImpl extends MinimalEObjectImpl.Container implements PortsCompasants {
+public class PortsComposantsImpl extends MinimalEObjectImpl.Container implements PortsComposants {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PortsCompasantsImpl() {
+	protected PortsComposantsImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class PortsCompasantsImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ProjecttArchitecturalPackage.Literals.PORTS_COMPASANTS;
+		return ProjecttArchitecturalPackage.Literals.PORTS_COMPOSANTS;
 	}
 
-} //PortsCompasantsImpl
+} //PortsComposantsImpl

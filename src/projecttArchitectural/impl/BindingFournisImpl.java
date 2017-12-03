@@ -2,17 +2,17 @@
  */
 package projecttArchitectural.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projecttArchitectural.BindingFournis;
 import projecttArchitectural.PortsComposantsFournis;
 import projecttArchitectural.ProjecttArchitecturalPackage;
-import projecttArchitectural.RoleConnecteursFournis;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,31 +23,20 @@ import projecttArchitectural.RoleConnecteursFournis;
  * </p>
  * <ul>
  *   <li>{@link projecttArchitectural.impl.BindingFournisImpl#getPortscomposantsfournis <em>Portscomposantsfournis</em>}</li>
- *   <li>{@link projecttArchitectural.impl.BindingFournisImpl#getRoleconnecteursfournis <em>Roleconnecteursfournis</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	/**
-	 * The cached value of the '{@link #getPortscomposantsfournis() <em>Portscomposantsfournis</em>}' reference.
+	 * The cached value of the '{@link #getPortscomposantsfournis() <em>Portscomposantsfournis</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPortscomposantsfournis()
 	 * @generated
 	 * @ordered
 	 */
-	protected PortsComposantsFournis portscomposantsfournis;
-
-	/**
-	 * The cached value of the '{@link #getRoleconnecteursfournis() <em>Roleconnecteursfournis</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoleconnecteursfournis()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoleConnecteursFournis roleconnecteursfournis;
+	protected EList<PortsComposantsFournis> portscomposantsfournis;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -73,75 +62,11 @@ public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortsComposantsFournis getPortscomposantsfournis() {
-		if (portscomposantsfournis != null && portscomposantsfournis.eIsProxy()) {
-			InternalEObject oldPortscomposantsfournis = (InternalEObject)portscomposantsfournis;
-			portscomposantsfournis = (PortsComposantsFournis)eResolveProxy(oldPortscomposantsfournis);
-			if (portscomposantsfournis != oldPortscomposantsfournis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS, oldPortscomposantsfournis, portscomposantsfournis));
-			}
+	public EList<PortsComposantsFournis> getPortscomposantsfournis() {
+		if (portscomposantsfournis == null) {
+			portscomposantsfournis = new EObjectResolvingEList<PortsComposantsFournis>(PortsComposantsFournis.class, this, ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS);
 		}
 		return portscomposantsfournis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortsComposantsFournis basicGetPortscomposantsfournis() {
-		return portscomposantsfournis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPortscomposantsfournis(PortsComposantsFournis newPortscomposantsfournis) {
-		PortsComposantsFournis oldPortscomposantsfournis = portscomposantsfournis;
-		portscomposantsfournis = newPortscomposantsfournis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS, oldPortscomposantsfournis, portscomposantsfournis));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoleConnecteursFournis getRoleconnecteursfournis() {
-		if (roleconnecteursfournis != null && roleconnecteursfournis.eIsProxy()) {
-			InternalEObject oldRoleconnecteursfournis = (InternalEObject)roleconnecteursfournis;
-			roleconnecteursfournis = (RoleConnecteursFournis)eResolveProxy(oldRoleconnecteursfournis);
-			if (roleconnecteursfournis != oldRoleconnecteursfournis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS, oldRoleconnecteursfournis, roleconnecteursfournis));
-			}
-		}
-		return roleconnecteursfournis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoleConnecteursFournis basicGetRoleconnecteursfournis() {
-		return roleconnecteursfournis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoleconnecteursfournis(RoleConnecteursFournis newRoleconnecteursfournis) {
-		RoleConnecteursFournis oldRoleconnecteursfournis = roleconnecteursfournis;
-		roleconnecteursfournis = newRoleconnecteursfournis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS, oldRoleconnecteursfournis, roleconnecteursfournis));
 	}
 
 	/**
@@ -153,11 +78,7 @@ public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS:
-				if (resolve) return getPortscomposantsfournis();
-				return basicGetPortscomposantsfournis();
-			case ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS:
-				if (resolve) return getRoleconnecteursfournis();
-				return basicGetRoleconnecteursfournis();
+				return getPortscomposantsfournis();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,14 +88,13 @@ public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS:
-				setPortscomposantsfournis((PortsComposantsFournis)newValue);
-				return;
-			case ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS:
-				setRoleconnecteursfournis((RoleConnecteursFournis)newValue);
+				getPortscomposantsfournis().clear();
+				getPortscomposantsfournis().addAll((Collection<? extends PortsComposantsFournis>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,10 +109,7 @@ public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS:
-				setPortscomposantsfournis((PortsComposantsFournis)null);
-				return;
-			case ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS:
-				setRoleconnecteursfournis((RoleConnecteursFournis)null);
+				getPortscomposantsfournis().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,9 +124,7 @@ public class BindingFournisImpl extends BindingImpl implements BindingFournis {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_FOURNIS__PORTSCOMPOSANTSFOURNIS:
-				return portscomposantsfournis != null;
-			case ProjecttArchitecturalPackage.BINDING_FOURNIS__ROLECONNECTEURSFOURNIS:
-				return roleconnecteursfournis != null;
+				return portscomposantsfournis != null && !portscomposantsfournis.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

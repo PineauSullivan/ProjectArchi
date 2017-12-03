@@ -2,17 +2,17 @@
  */
 package projecttArchitectural.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projecttArchitectural.BindingRequis;
 import projecttArchitectural.PortsComposantsRequis;
 import projecttArchitectural.ProjecttArchitecturalPackage;
-import projecttArchitectural.RoleConnecteursRequis;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,31 +23,20 @@ import projecttArchitectural.RoleConnecteursRequis;
  * </p>
  * <ul>
  *   <li>{@link projecttArchitectural.impl.BindingRequisImpl#getPortscomposantsrequis <em>Portscomposantsrequis</em>}</li>
- *   <li>{@link projecttArchitectural.impl.BindingRequisImpl#getRoleconnecteursrequis <em>Roleconnecteursrequis</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	/**
-	 * The cached value of the '{@link #getPortscomposantsrequis() <em>Portscomposantsrequis</em>}' reference.
+	 * The cached value of the '{@link #getPortscomposantsrequis() <em>Portscomposantsrequis</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPortscomposantsrequis()
 	 * @generated
 	 * @ordered
 	 */
-	protected PortsComposantsRequis portscomposantsrequis;
-
-	/**
-	 * The cached value of the '{@link #getRoleconnecteursrequis() <em>Roleconnecteursrequis</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoleconnecteursrequis()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoleConnecteursRequis roleconnecteursrequis;
+	protected EList<PortsComposantsRequis> portscomposantsrequis;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -73,75 +62,11 @@ public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortsComposantsRequis getPortscomposantsrequis() {
-		if (portscomposantsrequis != null && portscomposantsrequis.eIsProxy()) {
-			InternalEObject oldPortscomposantsrequis = (InternalEObject)portscomposantsrequis;
-			portscomposantsrequis = (PortsComposantsRequis)eResolveProxy(oldPortscomposantsrequis);
-			if (portscomposantsrequis != oldPortscomposantsrequis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS, oldPortscomposantsrequis, portscomposantsrequis));
-			}
+	public EList<PortsComposantsRequis> getPortscomposantsrequis() {
+		if (portscomposantsrequis == null) {
+			portscomposantsrequis = new EObjectResolvingEList<PortsComposantsRequis>(PortsComposantsRequis.class, this, ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS);
 		}
 		return portscomposantsrequis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortsComposantsRequis basicGetPortscomposantsrequis() {
-		return portscomposantsrequis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPortscomposantsrequis(PortsComposantsRequis newPortscomposantsrequis) {
-		PortsComposantsRequis oldPortscomposantsrequis = portscomposantsrequis;
-		portscomposantsrequis = newPortscomposantsrequis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS, oldPortscomposantsrequis, portscomposantsrequis));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoleConnecteursRequis getRoleconnecteursrequis() {
-		if (roleconnecteursrequis != null && roleconnecteursrequis.eIsProxy()) {
-			InternalEObject oldRoleconnecteursrequis = (InternalEObject)roleconnecteursrequis;
-			roleconnecteursrequis = (RoleConnecteursRequis)eResolveProxy(oldRoleconnecteursrequis);
-			if (roleconnecteursrequis != oldRoleconnecteursrequis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS, oldRoleconnecteursrequis, roleconnecteursrequis));
-			}
-		}
-		return roleconnecteursrequis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoleConnecteursRequis basicGetRoleconnecteursrequis() {
-		return roleconnecteursrequis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoleconnecteursrequis(RoleConnecteursRequis newRoleconnecteursrequis) {
-		RoleConnecteursRequis oldRoleconnecteursrequis = roleconnecteursrequis;
-		roleconnecteursrequis = newRoleconnecteursrequis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS, oldRoleconnecteursrequis, roleconnecteursrequis));
 	}
 
 	/**
@@ -153,11 +78,7 @@ public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS:
-				if (resolve) return getPortscomposantsrequis();
-				return basicGetPortscomposantsrequis();
-			case ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS:
-				if (resolve) return getRoleconnecteursrequis();
-				return basicGetRoleconnecteursrequis();
+				return getPortscomposantsrequis();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,14 +88,13 @@ public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS:
-				setPortscomposantsrequis((PortsComposantsRequis)newValue);
-				return;
-			case ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS:
-				setRoleconnecteursrequis((RoleConnecteursRequis)newValue);
+				getPortscomposantsrequis().clear();
+				getPortscomposantsrequis().addAll((Collection<? extends PortsComposantsRequis>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,10 +109,7 @@ public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS:
-				setPortscomposantsrequis((PortsComposantsRequis)null);
-				return;
-			case ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS:
-				setRoleconnecteursrequis((RoleConnecteursRequis)null);
+				getPortscomposantsrequis().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,9 +124,7 @@ public class BindingRequisImpl extends BindingImpl implements BindingRequis {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ProjecttArchitecturalPackage.BINDING_REQUIS__PORTSCOMPOSANTSREQUIS:
-				return portscomposantsrequis != null;
-			case ProjecttArchitecturalPackage.BINDING_REQUIS__ROLECONNECTEURSREQUIS:
-				return roleconnecteursrequis != null;
+				return portscomposantsrequis != null && !portscomposantsrequis.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

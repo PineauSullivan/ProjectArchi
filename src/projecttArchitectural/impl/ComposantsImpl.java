@@ -27,23 +27,13 @@ import projecttArchitectural.Propriétés;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projecttArchitectural.impl.ComposantsImpl#getPropriétés <em>Propriétés</em>}</li>
  *   <li>{@link projecttArchitectural.impl.ComposantsImpl#getInterfacecomposants <em>Interfacecomposants</em>}</li>
+ *   <li>{@link projecttArchitectural.impl.ComposantsImpl#getPropriétés <em>Propriétés</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ComposantsImpl extends ElementImpl implements Composants {
-	/**
-	 * The cached value of the '{@link #getPropriétés() <em>Propriétés</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPropriétés()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Propriétés> propriétés;
-
 	/**
 	 * The cached value of the '{@link #getInterfacecomposants() <em>Interfacecomposants</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -53,6 +43,16 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	 * @ordered
 	 */
 	protected EList<InterfaceComposants> interfacecomposants;
+
+	/**
+	 * The cached value of the '{@link #getPropriétés() <em>Propriétés</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropriétés()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Propriétés> propriétés;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,18 +78,6 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Propriétés> getPropriétés() {
-		if (propriétés == null) {
-			propriétés = new EObjectContainmentEList<Propriétés>(Propriétés.class, this, ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS);
-		}
-		return propriétés;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<InterfaceComposants> getInterfacecomposants() {
 		if (interfacecomposants == null) {
 			interfacecomposants = new EObjectContainmentEList<InterfaceComposants>(InterfaceComposants.class, this, ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS);
@@ -102,13 +90,25 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Propriétés> getPropriétés() {
+		if (propriétés == null) {
+			propriétés = new EObjectContainmentEList<Propriétés>(Propriétés.class, this, ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS);
+		}
+		return propriétés;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
-				return ((InternalEList<?>)getPropriétés()).basicRemove(otherEnd, msgs);
 			case ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS:
 				return ((InternalEList<?>)getInterfacecomposants()).basicRemove(otherEnd, msgs);
+			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
+				return ((InternalEList<?>)getPropriétés()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -121,10 +121,10 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
-				return getPropriétés();
 			case ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS:
 				return getInterfacecomposants();
+			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
+				return getPropriétés();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,13 +138,13 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
-				getPropriétés().clear();
-				getPropriétés().addAll((Collection<? extends Propriétés>)newValue);
-				return;
 			case ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS:
 				getInterfacecomposants().clear();
 				getInterfacecomposants().addAll((Collection<? extends InterfaceComposants>)newValue);
+				return;
+			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
+				getPropriétés().clear();
+				getPropriétés().addAll((Collection<? extends Propriétés>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,11 +158,11 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
-				getPropriétés().clear();
-				return;
 			case ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS:
 				getInterfacecomposants().clear();
+				return;
+			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
+				getPropriétés().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -176,10 +176,10 @@ public class ComposantsImpl extends ElementImpl implements Composants {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
-				return propriétés != null && !propriétés.isEmpty();
 			case ProjecttArchitecturalPackage.COMPOSANTS__INTERFACECOMPOSANTS:
 				return interfacecomposants != null && !interfacecomposants.isEmpty();
+			case ProjecttArchitecturalPackage.COMPOSANTS__PROPRIÉTÉS:
+				return propriétés != null && !propriétés.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

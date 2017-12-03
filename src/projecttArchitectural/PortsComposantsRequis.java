@@ -13,5 +13,5 @@ package projecttArchitectural;
  * @model
  * @generated
  */
-public interface PortsComposantsRequis extends PortsCompasants {
+public interface PortsComposantsRequis extends PortsComposants {
 } // PortsComposantsRequis

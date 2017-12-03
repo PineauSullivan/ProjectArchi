@@ -14,7 +14,7 @@ import projecttArchitectural.ProjecttArchitecturalPackage;
  *
  * @generated
  */
-public class PortsComposantsFournisImpl extends PortsCompasantsImpl implements PortsComposantsFournis {
+public class PortsComposantsFournisImpl extends PortsComposantsImpl implements PortsComposantsFournis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
