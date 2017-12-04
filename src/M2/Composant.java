@@ -46,5 +46,12 @@ public class Composant extends Element {
 		else return false;
 	}
 	
+	public InterfaceComposant getInterface(String nom){
+		if(interfaces.containsKey(nom)){
+			return interfaces.get(nom);
+		}
+		else return null;
+	}
+	
 	
 }

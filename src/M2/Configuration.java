@@ -107,6 +107,11 @@ public class Configuration extends Element {
 		attachments.add(new AttachmentFournisRequis(portFourni, roleRequi));
 	}
 	
-	
+	public Composant getComposant(String nom){
+		if(composants.containsKey(nom)){
+			return composants.get(nom);
+		}
+		else return null;
+	}
 	
 }
