@@ -19,14 +19,14 @@ public class RPC extends Connecteur{
 
 		RoleConnecteurFournis callerClient = new RoleConnecteurFournis("CallerClient");
 		RoleConnecteurRequis calledClient = new RoleConnecteurRequis("CalledClient");
-		RPC.add(callerClient);
-		RPC.add(calledClient);
+		this.add(callerClient);
+		this.add(calledClient);
 		Glue glueCS1 = new Glue("GlueCS1", callerClient, calledClient);
 		
 		RoleConnecteurFournis callerServeur = new RoleConnecteurFournis("CallerServeur");
 		RoleConnecteurRequis calledServeur = new RoleConnecteurRequis("CalledServeur");
-		RPC.add(callerServeur);
-		RPC.add(calledServeur);
+		this.add(callerServeur);
+		this.add(calledServeur);
 		Glue glueCS2 = new Glue("GlueCS2", callerServeur, calledServeur);
 
 		this.add(glueCS1);

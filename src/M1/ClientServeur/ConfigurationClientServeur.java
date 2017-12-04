@@ -30,19 +30,19 @@ public class ConfigurationClientServeur extends Configuration{
 		this.add(composantServeur);
 		
 		PortComposantRequis pcr1 = (PortComposantRequis) composantClient.getInterface("InterfaceClient").getPort("Port_Send_Client");
-		RoleConnecteurFournis rcf1 = (RoleConnecteurFournis) RPC.getRole("CallerServeur");
+		RoleConnecteurFournis rcf1 = (RoleConnecteurFournis) rpc.getRole("CallerServeur");
 		this.attachment(pcr1,rcf1);
 
 		PortComposantFournis pcf1 = (PortComposantFournis) composantServeur.getInterface("InterfaceServeur").getPort("Port_Receive_Request");
-		RoleConnecteurRequis rcr1 = (RoleConnecteurRequis) RPC.getRole("CalledServeur");
+		RoleConnecteurRequis rcr1 = (RoleConnecteurRequis) rpc.getRole("CalledServeur");
 		this.attachment(pcf1,rcr1);
 
 		PortComposantRequis pcr2 = (PortComposantRequis) composantServeur.getInterface("InterfaceServeur").getPort("Port_Send_Serveur");
-		RoleConnecteurFournis rcf2 = (RoleConnecteurFournis) RPC.getRole("CallerClient");
+		RoleConnecteurFournis rcf2 = (RoleConnecteurFournis) rpc.getRole("CallerClient");
 		this.attachment(pcr2,rcf2);
 		
 		PortComposantFournis pcf2 = (PortComposantFournis) composantClient.getInterface("InterfaceClient").getPort("Port_Receive_Client");
-		RoleConnecteurRequis rcr2 = (RoleConnecteurRequis) RPC.getRole("CalledClient");
+		RoleConnecteurRequis rcr2 = (RoleConnecteurRequis) rpc.getRole("CalledClient");
 		this.attachment(pcr2,rcf2);
 
 		
