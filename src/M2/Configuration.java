@@ -46,9 +46,7 @@ public class Configuration extends Element {
 	public void setConnecteurs(Hashtable<String, Connecteur> connecteurs) {
 		this.connecteurs = connecteurs;
 	}
-	
-	
-	
+
 	public List<Attachment> getAttachments() {
 		return attachments;
 	}

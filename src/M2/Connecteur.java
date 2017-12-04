@@ -27,20 +27,31 @@ public class Connecteur extends Element {
 		this.roles = roles;
 	}
 	
-	public boolean add(String nom, Glue glue){
-		if(!glues.containsKey(glue)){
-			glues.put(nom, glue);
+	public boolean add(Glue glue){
+		if(!glues.containsKey(glue.getNom())){
+			if(roles.containsKey(glue.getRoleFourni().getNom()) 
+					& roles.containsKey(glue.getRoleRequi().getNom())){
+				glues.put(glue.getNom(), glue);
+				return true;
+			}
+			else return false;
+		}
+		else return false;
+	}
+	
+	public boolean add(RoleConnecteur role){
+		if(!roles.containsKey(role.getNom())){
+			roles.put(role.getNom(), role);
 			return true;
 		}
 		else return false;
 	}
 	
-	public boolean add(String nom, RoleConnecteur role){
-		if(!roles.containsKey(role)){
-			roles.put(nom, role);
-			return true;
+	public RoleConnecteur getRole(String nom){
+		if(roles.containsKey(nom)){
+			return roles.get(nom);
 		}
-		else return false;
+		else return null;
 	}
 	
 }

@@ -12,9 +12,9 @@ public class Composant extends Element {
 
 	public Composant(String n) {
 		super(n);
-		List<Propriete> proprietes = new ArrayList<Propriete>();
+		proprietes = new ArrayList<Propriete>();
 		
-		Hashtable<String, InterfaceComposant> interfaces = new Hashtable<String, InterfaceComposant>();
+		interfaces = new Hashtable<String, InterfaceComposant>();
 	}
 
 	public List<Propriete> getProprietes() {
