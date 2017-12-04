@@ -4,9 +4,9 @@ public class Glue {
 	String nom;
 	
 	private RoleConnecteurFournis roleFourni;
-	private RoleConnecteurFournis roleRequi;
+	private RoleConnecteurRequis roleRequi;
 	
-	public Glue(String n, RoleConnecteurFournis roleFourni, RoleConnecteurFournis roleRequi) {
+	public Glue(String n, RoleConnecteurFournis roleFourni, RoleConnecteurRequis roleRequi) {
 		super();
 		this.nom = n;
 		this.roleFourni = roleFourni;
@@ -29,11 +29,11 @@ public class Glue {
 		this.roleFourni = roleFourni;
 	}
 
-	public RoleConnecteurFournis getRoleRequi() {
+	public RoleConnecteurRequis getRoleRequi() {
 		return roleRequi;
 	}
 
-	public void setRoleRequi(RoleConnecteurFournis roleRequi) {
+	public void setRoleRequi(RoleConnecteurRequis roleRequi) {
 		this.roleRequi = roleRequi;
 	}
 			
