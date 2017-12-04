@@ -65,24 +65,24 @@ public class Configuration extends Element {
 		this.bindings = bindings;
 	}
 
-	public boolean add(String nameElement, Element element){
+	public boolean add(Element element){
 		if(element.getClass().equals(Configuration.class)){
-			if(!configurations.containsKey(nameElement)){
-				configurations.put(nameElement, (Configuration)element);
+			if(!configurations.containsKey(element.getNom())){
+				configurations.put(element.getNom(), (Configuration)element);
 				return true;
 			}
 			else return false;
 		}
 		else if(element.getClass().equals(Composant.class)){
-			if(!composants.containsKey(nameElement)){
-				composants.put(nameElement, (Composant)element);
+			if(!composants.containsKey(element.getNom())){
+				composants.put(element.getNom(), (Composant)element);
 				return true;
 			}
 			else return false;
 		}
 		else if(element.getClass().equals(Connecteur.class)){
-			if(!connecteurs.containsKey(nameElement)){
-				connecteurs.put(nameElement, (Connecteur)element);
+			if(!connecteurs.containsKey(element.getNom())){
+				connecteurs.put(element.getNom(), (Connecteur)element);
 				return true;
 			}
 			else return false;

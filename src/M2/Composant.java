@@ -38,9 +38,9 @@ public class Composant extends Element {
 		return true;
 	}
 	
-	public boolean add(String nom, InterfaceComposant interf){
-		if(!interfaces.containsKey(nom)){
-			interfaces.put(nom, interf);
+	public boolean add(InterfaceComposant interf){
+		if(!interfaces.containsKey(interf.getNom())){
+			interfaces.put(interf.getNom(), interf);
 			return true;
 		}
 		else return false;

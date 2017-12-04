@@ -14,6 +14,14 @@ public abstract class Element {
 		nom = n;
 		contraintes = new ArrayList<Contrainte>();
 	}
+	
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
 	public List<Contrainte> getContraintes() {
 		return contraintes;
