@@ -3,6 +3,7 @@
  */
 package M1.ClientServeur.Interface;
 
+import M2.Composant;
 import M2.InterfaceComposant;
 import M2.PortComposantFournis;
 import M2.PortComposantRequis;
@@ -21,5 +22,8 @@ public class InterfaceServeur extends InterfaceComposant{
 		
 		this.add(PCF);
 		this.add(PCR);
+		
+		PCF.setInterfaceComposant(this);
+		PCR.setInterfaceComposant(this);
 	}
 }

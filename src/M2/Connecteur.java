@@ -4,8 +4,8 @@ import java.util.Hashtable;
 
 public class Connecteur extends Element {
 	
-	Hashtable<String, Glue> glues;
-	Hashtable<String, RoleConnecteur> roles;
+	Hashtable<String, Glue> glues = new Hashtable<String, Glue>();
+	Hashtable<String, RoleConnecteur> roles = new Hashtable<String, RoleConnecteur>();
 	
 	public Connecteur(String n) {
 		super(n);

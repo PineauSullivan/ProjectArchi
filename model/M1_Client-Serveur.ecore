@@ -278,8 +278,8 @@
         eSuperTypes="projecttArchitectural.ecore#//Glue">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_connectionmanager_database"
           eType="#//FonctionServeur/RoleFournis_ConnectionManager_Database"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_database"
-          eType="#//FonctionServeur/RoleRequis_ConnectionManager_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_connection"
+          eType="#//FonctionServeur/RoleRequis_Database_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleFournis_ConnectionManager_Database"
         instanceClassName="projecttArchitectural.RoleConnecteursFournis" eSuperTypes="projecttArchitectural.ecore#//RoleConnecteursFournis"/>
@@ -331,38 +331,38 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GlueServeur2" instanceClassName="projecttArchitectural.Glue"
         eSuperTypes="projecttArchitectural.ecore#//Glue">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_connectionmanager_security"
-          eType="#//FonctionServeur/RoleFournis_ConnectionManager_Security"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_security"
-          eType="#//FonctionServeur/RoleRequis_ConnectionManager_Security"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_database"
+          eType="#//FonctionServeur/RoleRequis_ConnectionManager_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_database_connection"
+          eType="#//FonctionServeur/RoleFournis_Database_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GlueServeur3" instanceClassName="projecttArchitectural.Glue"
         eSuperTypes="projecttArchitectural.ecore#//Glue">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_connection"
-          eType="#//FonctionServeur/RoleFournis_Security_Connection"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_connectionmanager_security"
+          eType="#//FonctionServeur/RoleFournis_ConnectionManager_Security"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_security_connection"
           eType="#//FonctionServeur/RoleRequis_Security_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GlueServeur4" instanceClassName="projecttArchitectural.Glue"
         eSuperTypes="projecttArchitectural.ecore#//Glue">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_database"
-          eType="#//FonctionServeur/RoleFournis_Security_Database"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_security_database"
-          eType="#//FonctionServeur/RoleRequis_Security_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_connectionmanager_security"
+          eType="#//FonctionServeur/RoleRequis_ConnectionManager_Security"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_connection"
+          eType="#//FonctionServeur/RoleFournis_Security_Connection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GlueServeur5" instanceClassName="projecttArchitectural.Glue"
         eSuperTypes="projecttArchitectural.ecore#//Glue">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_database_connection"
-          eType="#//FonctionServeur/RoleFournis_Database_Connection"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_connection"
-          eType="#//FonctionServeur/RoleRequis_Database_Connection"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_security_database"
+          eType="#//FonctionServeur/RoleFournis_Security_Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_security"
+          eType="#//FonctionServeur/RoleRequis_Database_Security"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GlueServeur6" instanceClassName="projecttArchitectural.Glue"
         eSuperTypes="projecttArchitectural.ecore#//Glue">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_security_database"
+          eType="#//FonctionServeur/RoleRequis_Security_Database"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolefournis_database_security"
           eType="#//FonctionServeur/RoleFournis_Database_Security"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequis_database_security"
-          eType="#//FonctionServeur/RoleRequis_Database_Security"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

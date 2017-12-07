@@ -25,10 +25,6 @@ public class ConfigurationClientServeur extends Configuration{
 		ComposantClient composantClient = new ComposantClient();
 		ComposantServeur composantServeur = new ComposantServeur();
 		
-		this.add(rpc);
-		this.add(composantClient);
-		this.add(composantServeur);
-		
 		PortComposantRequis pcr1 = (PortComposantRequis) composantClient.getInterface("InterfaceClient").getPort("Port_Send_Client");
 		RoleConnecteurFournis rcf1 = (RoleConnecteurFournis) rpc.getRole("CallerServeur");
 		this.attachment(pcr1,rcf1);
@@ -43,8 +39,13 @@ public class ConfigurationClientServeur extends Configuration{
 		
 		PortComposantFournis pcf2 = (PortComposantFournis) composantClient.getInterface("InterfaceClient").getPort("Port_Receive_Client");
 		RoleConnecteurRequis rcr2 = (RoleConnecteurRequis) rpc.getRole("CalledClient");
-		this.attachment(pcr2,rcf2);
-
+		this.attachment(pcf2,rcr2);
 		
+		composantClient.setConfiguration(this);
+		composantServeur.setConfiguration(this);
+		this.add(composantClient);
+		this.add(composantServeur);
+		this.addConnecteur(rpc);
 	}
+	
 }

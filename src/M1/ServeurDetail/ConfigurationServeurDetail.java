@@ -3,7 +3,6 @@
  */
 package M1.ServeurDetail;
 
-import M1.ClientServeur.Connecteur.RPC;
 import M1.ServeurDetail.Composant.ConnectionManager;
 import M1.ServeurDetail.Composant.Database;
 import M1.ServeurDetail.Composant.SecurityManagerSD;
@@ -31,7 +30,8 @@ public class ConfigurationServeurDetail extends Configuration{
 		this.add(connectionManager);
 		this.add(database);
 		this.add(securityManager);
-	
+		this.addConnecteur(connecteurServeurDetail);
+		
 		PortComposantFournis pcf1 = (PortComposantFournis) connectionManager.getInterface("InterfaceConnectionManager").getPort("PortFournis_ConnectionManager_Database");
 		RoleConnecteurRequis rcr1 = (RoleConnecteurRequis) connecteurServeurDetail.getRole("RoleRequis_Database_Connection");
 		this.attachment(pcf1,rcr1);
@@ -68,7 +68,7 @@ public class ConfigurationServeurDetail extends Configuration{
 		RoleConnecteurFournis rcf5 = (RoleConnecteurFournis) connecteurServeurDetail.getRole("RoleFournis_ConnectionManager_Database");
 		this.attachment(pcr5, rcf5);
 		
-		PortComposantFournis pcf5 = (PortComposantFournis) securityManager.getInterface("InterfaceDatabase").getPort("PortFournis_database_Connection");
+		PortComposantFournis pcf5 = (PortComposantFournis) database.getInterface("InterfaceDatabase").getPort("PortFournis_database_Connection");
 		RoleConnecteurRequis rcr5 = (RoleConnecteurRequis) connecteurServeurDetail.getRole("RoleRequis_ConnectionManager_Database");
 		this.attachment(pcf5,rcr5);
 		
@@ -76,10 +76,12 @@ public class ConfigurationServeurDetail extends Configuration{
 		RoleConnecteurFournis rcf6 = (RoleConnecteurFournis) connecteurServeurDetail.getRole("RoleFournis_Security_Database");
 		this.attachment(pcr6, rcf6);
 		
-		PortComposantFournis pcf6 = (PortComposantFournis) securityManager.getInterface("InterfaceDatabase").getPort("PortFournis_database_Security");
+		PortComposantFournis pcf6 = (PortComposantFournis) database.getInterface("InterfaceDatabase").getPort("PortFournis_database_Security");
 		RoleConnecteurRequis rcr6 = (RoleConnecteurRequis) connecteurServeurDetail.getRole("RoleRequis_Security_Database");
 		this.attachment(pcf6,rcr6);
 		
-		
+		connectionManager.setConfiguration(this);
+		securityManager.setConfiguration(this);
+		database.setConfiguration(this);
 	}
 }

@@ -2,17 +2,25 @@ package M2;
 
 import java.util.Hashtable;
 
+import Donnees.Message;
+
 public class InterfaceComposant {
 	String nom;
+	Composant composant;
 	
-	Hashtable<String, PortComposantFournis> portsFournis;
-	Hashtable<String, PortComposantRequis> portsrequis;
+	Hashtable<String, PortComposantFournis> portsFournis = new Hashtable<String, PortComposantFournis>();
+	Hashtable<String, PortComposantRequis> portsrequis = new Hashtable<String, PortComposantRequis>();
 
 	public InterfaceComposant(String nom) {
 		super();
 		this.nom = nom;
+		this.composant = null;
 	}
 
+	public void setComposant(Composant composant){
+		this.composant = composant;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
@@ -47,6 +55,16 @@ public class InterfaceComposant {
 			return portsrequis.get(nom);
 		}
 		else return null;
+	}
+	
+	public void recois(Message message, String name){
+		if(this.composant!=null)
+			this.composant.recois(message, name);
+	}
+	
+	public void envoie(Message message, String name){
+		if(this.composant!=null)
+			this.composant.envoie(message, name);
 	}
 	
 }

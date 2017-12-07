@@ -3,6 +3,7 @@
  */
 package M1.ServeurDetail.Composant.Interface;
 
+import M2.Composant;
 import M2.InterfaceComposant;
 import M2.PortComposantFournis;
 import M2.PortComposantRequis;
@@ -30,5 +31,11 @@ public class InterfaceSecurityManager extends InterfaceComposant{
 		
 		this.add(PCR1);
 		this.add(PCR2);
+		
+		PCF1.setInterfaceComposant(this);
+		PCF2.setInterfaceComposant(this);
+		
+		PCR1.setInterfaceComposant(this);
+		PCR2.setInterfaceComposant(this);
 	}
 }

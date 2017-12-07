@@ -4,19 +4,28 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
+import Donnees.Message;
+
 public class Composant extends Element {
 
 	List<Propriete> proprietes;
 	
 	Hashtable<String, InterfaceComposant> interfaces;
 
+	Configuration configuration;
+	
 	public Composant(String n) {
 		super(n);
 		proprietes = new ArrayList<Propriete>();
 		
 		interfaces = new Hashtable<String, InterfaceComposant>();
+		
+		this.configuration=null;
 	}
 
+	public void setConfiguration(Configuration configuration){
+		this.configuration = configuration;
+	}
 	public List<Propriete> getProprietes() {
 		return proprietes;
 	}
@@ -53,5 +62,33 @@ public class Composant extends Element {
 		else return null;
 	}
 	
+	public void envoie(Message message, String name){
+		if(this.configuration!=null)
+			this.configuration.envoie(message, name);
+	}
+
+	public void recois(Message message, String name){
+		if(this.configuration!=null)
+			this.configuration.recois(message, name);
+	}
 	
+	public PortComposantRequis getPortRequis(String name){
+		for(InterfaceComposant ic : interfaces.values()){
+			if(ic.getPort(name)!=null){
+				return (PortComposantRequis) ic.getPort(name);
+			}
+		}
+		System.out.println("Port requis inconnu : "+name);
+		return null;
+	}
+	
+	public PortComposantFournis getPortFournis(String name){
+		for(InterfaceComposant ic : interfaces.values()){
+			if(ic.getPort(name)!=null){
+				return (PortComposantFournis) ic.getPort(name);
+			}
+		}
+		System.out.println("Port fournis inconnu : "+name);
+		return null;
+	}
 }
