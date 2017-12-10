@@ -42,6 +42,7 @@ public class Database extends Composant{
 				
 			case 2:
 				if(this.ouvert){
+					this.ouvert = false;
 					data += message.getContent();
 					message.setContent("Données enregistrées !");
 					message.setType(4);

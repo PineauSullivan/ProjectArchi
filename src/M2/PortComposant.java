@@ -10,7 +10,6 @@ public abstract class PortComposant {
 	public PortComposant(String nom) {
 		super();
 		this.nom = nom;
-		this.interfaceComposant = interfaceComposant;
 	}
 
 	public void setInterfaceComposant(InterfaceComposant interfaceComposant){
