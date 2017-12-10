@@ -11,7 +11,7 @@ import M1.ClientServeur.Composant.ComposantClient;
  * @author Sébastien Vallée & Sullivan Pineau
  *
  */
-public class main {
+public class App {
 	/**
 	 * @param args
 	 */

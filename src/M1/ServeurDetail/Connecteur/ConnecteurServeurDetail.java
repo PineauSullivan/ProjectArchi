@@ -9,7 +9,7 @@ import M2.RoleConnecteurFournis;
 import M2.RoleConnecteurRequis;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class ConnecteurServeurDetail extends Connecteur{
