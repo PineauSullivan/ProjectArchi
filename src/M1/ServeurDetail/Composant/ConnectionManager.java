@@ -52,6 +52,7 @@ public class ConnectionManager extends Composant {
 				break;
 			default:
 				pcf = this.getPortFournis("PortFournisCS");
+				message.setContent("Type du message inconnu");
 				if(pcf!=null){
 					pcf.envoie(message);
 				}

@@ -54,12 +54,32 @@ public class main {
 
 		System.out.println();
 		System.out.println("----------------------------------------------------------------");
-		System.out.println("----------- Message read data true -----------------------------");
+		System.out.println("----------- Message read data false -----------------------------");
 		System.out.println("----------------------------------------------------------------");
-		Message messageReadData = new Message(null, 3);
-		client.envoieMessage(messageReadData);
+		Message messageReadDatafalse = new Message(null, 3);
+		client.envoieMessage(messageReadDatafalse);
 		System.out.println("----------------------------------------------------------------");
 
+
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("------------- Message open Database bis true -------------------");
+		System.out.println("----------------------------------------------------------------");
+		Message messageOpenDataBasebis = new Message("security", 1);
+		client.envoieMessage(messageOpenDataBasebis);
+		System.out.println("----------------------------------------------------------------");
+
+
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("----------- Message read data true -----------------------------");
+		System.out.println("----------------------------------------------------------------");
+		Message messageReadDatatrue = new Message(null, 3);
+		client.envoieMessage(messageReadDatatrue);
+		System.out.println("----------------------------------------------------------------");
+
+		
+		
 		System.out.println();
 		System.out.println("----------------------------------------------------------------");
 		System.out.println("----------- Message a destinataires du client ------------------");

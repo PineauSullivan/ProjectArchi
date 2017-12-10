@@ -152,7 +152,7 @@ public class Configuration extends Element {
 						}
 					}
 					if(portComposantRequis!=null){
-						System.out.println("Attachment trouvé entre : "+name+" -> "+ portComposantRequis.getNom());
+						System.out.println(this.nom+" - Attachment trouvé entre : "+name+" -> "+ portComposantRequis.getNom());
 						portComposantRequis.recois(message);
 						envoieAttachment= true;
 					}
@@ -164,19 +164,19 @@ public class Configuration extends Element {
 			for(Binding binding : bindings){
 				if(binding.getPort1().getNom().equals(name)){
 					if(binding.getPort2().getType().equals(Type.REQUIS)){
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort2().recois(message);
 					}else{
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort2().envoie(message);
 					}
 					break;
 				}else if(binding.getPort2().getNom().equals(name)){
 					if(binding.getPort1().getType().equals(Type.REQUIS)){
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort1().recois(message);
 					}else{
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort1().envoie(message);
 					}
 					break;
@@ -193,19 +193,19 @@ public class Configuration extends Element {
 			for(Binding binding : bindings){
 				if(binding.getPort1().getNom().equals(name)){
 					if(binding.getPort2().getType().equals(Type.REQUIS)){
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort2().recois(message);
 					}else{
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort2().envoie(message);
 					}
 					break;
 				}else if(binding.getPort2().getNom().equals(name)){
 					if(binding.getPort1().getType().equals(Type.REQUIS)){
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort1().recois(message);
 					}else{
-						System.out.println("Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
+						System.out.println(this.nom+" - Binding trouvé entre : "+name+" -> "+ binding.getPort2().getNom());
 						binding.getPort1().envoie(message);
 					}
 					break;

@@ -55,11 +55,20 @@ public class Database extends Composant{
 				}
 				break;
 			case 3:
-				message.setContent(data);
-				message.setType(4);
-				pcf = this.getPortFournis("PortFournis_database_Connection");
-				if(pcf!=null){
-					pcf.envoie(message);
+				if(this.ouvert){
+					message.setContent(data);
+					message.setType(4);
+					pcf = this.getPortFournis("PortFournis_database_Connection");
+					if(pcf!=null){
+						pcf.envoie(message);
+					}
+				}else{
+					message.setContent("Database fermée !");
+					message.setType(4);
+					pcf = this.getPortFournis("PortFournis_database_Connection");
+					if(pcf!=null){
+						pcf.envoie(message);
+					}
 				}
 				break;
 			default:

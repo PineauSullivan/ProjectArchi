@@ -18,7 +18,7 @@ public class PortComposantRequis extends PortComposant {
 	}
 	
 	public void recois(Message message){
-		System.out.println("Message reçu sur le port Requis : "+this.nom);
+		System.out.println(this.interfaceComposant.composant.nom+" - Message reçu sur le port Requis : "+this.nom);
 		this.interfaceComposant.recois(message,this.nom);
 	}
 }

@@ -14,7 +14,7 @@ public class PortComposantFournis extends PortComposant {
 	}
 	
 	public void envoie(Message message){
-		System.out.println("Message envoyé sur le port Fournis : "+this.nom);
+		System.out.println(this.interfaceComposant.composant.nom+" - Message envoyé sur le port Fournis : "+this.nom);
 		this.interfaceComposant.envoie(message, this.nom);
 	}
 	
