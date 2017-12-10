@@ -1,5 +1,9 @@
 package M2;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class BindingFournis extends Binding {
 	public Type _type = Type.FOURNIS;
 	

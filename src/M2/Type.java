@@ -1,10 +1,8 @@
-/**
- * 
- */
 package M2;
 
+
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public enum Type {

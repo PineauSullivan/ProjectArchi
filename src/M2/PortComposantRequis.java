@@ -2,6 +2,10 @@ package M2;
 
 import Donnees.Message;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class PortComposantRequis extends PortComposant {
 	public PortComposantRequis(String nom) {
 		super(nom);

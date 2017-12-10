@@ -1,5 +1,9 @@
 package M2;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;

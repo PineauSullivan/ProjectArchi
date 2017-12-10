@@ -2,6 +2,10 @@ package M2;
 
 import Donnees.Message;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public abstract class PortComposant {
 	public Type type = null;
 	String nom;

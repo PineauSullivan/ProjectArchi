@@ -2,6 +2,10 @@ package M2;
 
 import Donnees.Message;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class PortComposantFournis extends PortComposant {
 
 	public PortComposantFournis(String nom) {
@@ -15,8 +19,7 @@ public class PortComposantFournis extends PortComposant {
 	}
 	
 	public void recois(Message message){
-		// Par défaut, ne fait rien
-		System.out.println("Impossible de recevoir un message sur un port fournis");
+		System.out.println(this.getNom()+" - Impossible de recevoir un message sur un port fournis");
 	}
 	
 }

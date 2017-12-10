@@ -3,13 +3,12 @@
  */
 package M1.ServeurDetail.Composant.Interface;
 
-import M2.Composant;
 import M2.InterfaceComposant;
 import M2.PortComposantFournis;
 import M2.PortComposantRequis;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class InterfaceConnectionManager extends InterfaceComposant{

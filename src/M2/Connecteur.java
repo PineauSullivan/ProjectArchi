@@ -2,6 +2,10 @@ package M2;
 
 import java.util.Hashtable;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class Connecteur extends Element {
 	
 	Hashtable<String, Glue> glues = new Hashtable<String, Glue>();

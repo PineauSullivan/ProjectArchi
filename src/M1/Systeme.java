@@ -4,16 +4,14 @@
 package M1;
 
 import M1.ServeurDetail.ConfigurationServeurDetail;
-import Donnees.Message;
 import M1.ClientServeur.ConfigurationClientServeur;
-import M1.ClientServeur.Connecteur.RPC;
+import M1.ClientServeur.Composant.ComposantClient;
 import M2.Configuration;
-import M2.Connecteur;
 import M2.PortComposantFournis;
 import M2.PortComposantRequis;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class Systeme extends Configuration {
@@ -39,8 +37,7 @@ public class Systeme extends Configuration {
 		}
 	}
 	
-	public void clientEnvoie(Message message){
-		PortComposantFournis pcf = this.getConfigurations().get("ConfigurationClientServeur").getComposant("ComposantClient").getPortFournis("Port_Receive_Client");
-		pcf.envoie(message);
+	public ComposantClient getClient(){
+		return (ComposantClient) this.getConfigurations().get("ConfigurationClientServeur").getComposant("ComposantClient");
 	}
 }

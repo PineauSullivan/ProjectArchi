@@ -3,13 +3,11 @@
  */
 package M1.ClientServeur.Composant;
 
-import Donnees.Message;
 import M1.ClientServeur.Interface.InterfaceServeur;
 import M2.Composant;
-import M2.Configuration;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class ComposantServeur extends Composant {

@@ -6,6 +6,10 @@ import java.util.List;
 
 import Donnees.Message;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class Configuration extends Element {
 	
 	Hashtable<String, Configuration> configurations;

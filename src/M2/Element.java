@@ -3,6 +3,10 @@ package M2;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public abstract class Element {
 	
 	String nom;

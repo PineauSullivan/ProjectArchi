@@ -6,11 +6,10 @@ package M1.ServeurDetail.Composant;
 import Donnees.Message;
 import M1.ServeurDetail.Composant.Interface.InterfaceSecurityManager;
 import M2.Composant;
-import M2.Configuration;
 import M2.PortComposantFournis;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class SecurityManagerSD extends Composant {

@@ -4,6 +4,10 @@ import java.util.Hashtable;
 
 import Donnees.Message;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class InterfaceComposant {
 	String nom;
 	Composant composant;

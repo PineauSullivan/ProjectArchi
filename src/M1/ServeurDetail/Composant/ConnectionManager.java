@@ -6,11 +6,10 @@ package M1.ServeurDetail.Composant;
 import Donnees.Message;
 import M1.ServeurDetail.Composant.Interface.InterfaceConnectionManager;
 import M2.Composant;
-import M2.Configuration;
 import M2.PortComposantFournis;
 
 /**
- * @author sullivan
+ * @author Sébastien Vallée & Sullivan Pineau
  *
  */
 public class ConnectionManager extends Composant {

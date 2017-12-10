@@ -1,5 +1,9 @@
 package M2;
 
+/**
+ * @author Sébastien Vallée & Sullivan Pineau
+ *
+ */
 public class BindingRequis extends Binding {
 	public Type _type = Type.REQUIS;
 
