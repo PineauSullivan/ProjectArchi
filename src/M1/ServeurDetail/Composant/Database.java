@@ -56,6 +56,7 @@ public class Database extends Composant{
 				break;
 			case 3:
 				if(this.ouvert){
+					this.ouvert = false;
 					message.setContent(data);
 					message.setType(4);
 					pcf = this.getPortFournis("PortFournis_database_Connection");
